@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CYBERCORP</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="tecnología,seguridad,cámaras,hardware,software">
+  <meta content="" name="hardware y software">
+
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- CSS File -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/ionicons.min.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto fuente">CYBERCORP</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="fuente" style="margin-right: 8px;font-size: 12px;">Volver al Inicio</a></li>
+          <li><a href="#about" class="fuente">Seguridad</a></li>
+          <li><a href="#more-features" class="fuente">Computadoras</a></li>
+          <li><a href="#pricing" class="fuente">Accesorios</a></li>
+          <li><a href="#contact" class="fuente">Robotica</a></li>
+          
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  
+
+  <main id="main">
+
+    <section id="pricing" class="section-bg">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <h3 class="section-title">Nuestros Productos</h3>
+          <span class="section-divider"></span>
+          
+          <p class="section-description">Vea nuestro catálogo de productos y servicios</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" v-for="p in productos">
+            <div class="box wow fadeInLeft" style="min-height: 60vh">
+              <div class="contenedor" style="position: relative;display: inline-block;text-align: center;width: 100%;">
+                <img src="img/logo.jpg" alt="" style="width: 100%;">
+                <div class="text-center" style="margin: -10px; width: 100%; color: #ffffff;position: absolute; top: 10px;left: 10px;background: rgba(0,0,0,0.5);">
+                  <h5> {{p.desc}} </h5>
+                </div>
+                <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                  <h4><sup>Bs</sup> {{p.precio}} </h4>
+                </div>
+              </div>
+
+              <div style="padding: 40px;">
+               <ul>
+                 <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
+                 <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
+                 <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
+                 <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
+                 <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
+               </ul>
+              </div>
+             
+              <!-- <a href="#" class="get-started-btn">Get Started</a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-left: 5%;margin-right: 5%;">
+        <p>Hola mundo</p>
+        
+      </div>
+
+    </section><!-- #pricing -->
+  
+
+
+  </main>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  
+  <!-- social bar -->
+  <div class="socialbar">
+    <ul>
+      <li><a href="https://www.facebook.com/unsxxbolivia" title="facebook" target="_blank" class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.instagram.com/esambolivia" title="Instagram" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="mailto:info@esam.edu.bo" title="Email" class="icon-mail"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </div>
+  <!-- social bar /-->
+
+  <!-- JavaScript Libraries -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+  <script src="js/easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/hoverIntent.js"></script>
+  <script src="js/superfish.min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <scipt src="https://www.gstatic.com/firebasejs/init.js"></scipt>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+
+  <script defer type="text/javascript">
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX00dTs3tgbuFwZwbmz7AfS3a3clAe9fY",
+      authDomain: "cyberrcorp.firebaseapp.com",
+      databaseURL: "https://cyberrcorp.firebaseio.com",
+      projectId: "cyberrcorp",
+      storageBucket: "cyberrcorp.appspot.com",
+      messagingSenderId: "1098421641378",
+      appId: "1:1098421641378:web:d00202f2fa9a641e"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var app = new Vue({
+      el: '#pricing',
+      data: {
+        productos: [],
+      },
+      methods: {
+        cargar(){
+          var vue = this;
+          var db = firebase.firestore();
+          var dbcategorias = db.collection("sedes").doc('tarija2').collection("articulos").orderBy("catenom","desc").limit(6);
+          dbcategorias.get().then((querySnapshot) => {
+              querySnapshot.forEach((doc) => {
+                  var obj = doc.data();
+                  obj.id = doc.id;
+                  vue.productos.push( obj );
+              });
+
+              console.log( vue.productos );
+          });
+        }
+      },
+      mounted(){
+        this.cargar();
+      }
+
+    });
+
+
+
+
+
+
+
+
+
+    // Jquery
+    $.getJSON("http://freegeoip.net/json/", function(data) {
+      var ip = data.ip;
+      var country = data.country_name;
+      $("#ip").val(ip);
+      $("#content").html("Hello visitor from " + country);
+    });
+
+
+    
+
+
+  </script>
+
+</body>
+</html>
