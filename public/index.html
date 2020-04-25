@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CYBERCORP</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="tecnología,seguridad,cámaras,hardware,software">
@@ -19,49 +22,62 @@
   <link href="css/ionicons.min.css" rel="stylesheet">
   <link href="css/magnific-popup.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- CSS File gallery -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/gallery-grid.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+  <!-- CSS File headline -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="css/headline.css">
+
+
+
   <style>
-    #particles-js,#particles-js2{
+    #particles-js,
+    #particles-js2 {
       width: 100%;
       height: 100%;
       position: absolute;
     }
-    .fb-page,iframe{
-      height: 650px!important;
+
+    .fb-page,
+    iframe {
+      height: 650px !important;
     }
-    .map_dir{
-      height: 480px!important;
+
+    .map_dir {
+      height: 480px !important;
     }
-    
   </style>
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<!-- Load Facebook SDK for JavaScript -->
-    <script>
-	        window.fbAsyncInit = function() {
-	          FB.init({
-	            xfbml            : true,
-	            version          : 'v5.0'
-	          });
-	        };
-	
-	        (function(d, s, id) {
-	        var js, fjs = d.getElementsByTagName(s)[0];
-	        if (d.getElementById(id)) return;
-	        js = d.createElement(s); js.id = id;
-	        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-	        fjs.parentNode.insertBefore(js, fjs);
-	      }(document, 'script', 'facebook-jssdk'));</script>
-	
-	      <!-- Your customer chat code -->
-	      <div class="fb-customerchat"
-	        attribution=setup_tool
-	        page_id="123720405685500"
-	  theme_color="#075685"
-	  logged_in_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?"
-	  logged_out_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?">
-	      </div>
+  <div id="fb-root"></div>
+  <!-- Load Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v5.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="123720405685500" theme_color="#075685"
+    logged_in_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?"
+    logged_out_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?">
+  </div>
 
   <!--==========================
     Header
@@ -75,11 +91,11 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro" class="fuente">Inicio</a></li>
-          <li><a href="#about" class="fuente">Acerca de Nosotros</a></li>
-          <li><a href="#more-features" class="fuente">Servicios</a></li>
-          <li><a href="#pricing" class="fuente">Productos</a></li>
-          <li><a href="#contact" class="fuente">Contactanos</a></li>
+          <li class="menu-active"><a href="#intro" class="fuente">INICIO</a></li>
+          <li><a href="#about" class="fuente">ACERCA DE NOSOTROS</a></li>
+          <li><a href="#more-features" class="fuente">SERVICIOS</a></li>
+          <li><a href="#pricing" class="fuente">PRODUCTOS</a></li>
+          <li><a href="#contact" class="fuente">CONTÁCTANOS</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -92,16 +108,21 @@
     <div id="particles-js"></div>
 
     <div class="intro-text">
-      <h2 class="fuente">Bienvenido</h2>
-      <p class="fuente">Soporte tecnológico y asesoramiento</p>
+      <h2 class="fuente">BIENVENIDO</h2>
+
       <a href="#more-features" class="btn-get-started scrollto fuente">Servicios</a>
     </div>
 
     <div class="product-screens">
 
       <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
-        <img src="img/logo2.png" alt="logo" width="400">
+        <img src="img/logo2.png" alt="logo" width="400"> <br>
+        </hr>
+        <p class="fuente">Soporte tecnológico y asesoramiento</p>
+        </hr>
       </div>
+
+
 
     </div>
 
@@ -113,28 +134,73 @@
       About Us Section
     ============================-->
     <section id="about" class="section-bg">
+      <div class="container gallery-container1">
+      <div class="section-header">
+        <h3 class="section-title">ACERCA DE NOSOTROS</h3>
+        <span class="section-divider"></span>
+      </div>
+      <div id="app" class="wrapper" v-cloak v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
+        <div class="slide-wrapper" 
+             v-for="(slide, index) in slides" 
+             v-bind:class="{ active: index === currentSlide }"
+             v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
+            <div class="slide-inner">
+                <div class="slide-bg-text">
+                    <h2>{{ slide.headlineFirstLine }}</h2>
+                    <p>{{ slide.headlineSecondLine }}</p>
+                </div>
+                <div class="slide-rect-filter">
+                    <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
+                </div>
+                <div class="slide-content">
+                    <h1 class="slide-content-text"><h2>{{ slide.headlineFirstLine }}</h2><p>{{ slide.headlineSecondLine }}</p></h1></div>
+                <h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2></div>
+        </div>
+    <div class="controls-container">
+        <button class="controls-button" 
+                v-for="(slide, index) in slides"
+                v-bind:class="{ active: index === currentSlide }"
+                v-on:click="updateSlide(index)">{{ slide.headlineFirstLine }} </button>
+    </div>
+    <div class="pagination-container">
+        <span class="pagination-item"
+              v-for="(slide, index) in slides"
+              v-bind:class="{ active: index === currentSlide }"
+              v-on:click="updateSlide(index)"></span>
+    </div>
+</div>
+</div>
+    </section>
+    
+
+   <!-- <section id="about" class="section-bg">
       <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
         <div class="section-header">
-          <h3 class="section-title">Acerca de Nosotros</h3>
+          <h3 class="section-title">ACERCA DE NOSOTROS</h3>
           <span class="section-divider"></span>
         </div>
 
         <div class="row">
+          
           <div class="col-lg-6 about-img wow fadeInLeft">
-         	Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de calidad y eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados para cumplir con los requerimientos y la responsabilidad para con nuestros clientes.
+            <p>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de calidad y
+              eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados para cumplir con los
+              requerimientos y la responsabilidad para con nuestros clientes.</p>
             <br><br><img src="img/about-img.jpg" alt="IMG" style="height: 100%;">
           </div>
 
           <div class="col-lg-6 content wow fadeInRight">
             <h2>Misión</h2>
             <p>
-              Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios.
+              Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad,
+              disponibilidad y soporte a futuro en todos nuestros servicios.
             </p>
             <h2>Visión</h2>
             <p>
-              Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.
+              Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones
+              a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.
             </p>
-			<h2>Valores</h2>
+            <h2>Valores</h2>
             <div class="row">
               <div class="col-sm-4">
                 <ul>
@@ -142,7 +208,7 @@
                   <li><i class="ion-android-checkmark-circle"></i> Innovación </li>
                   <li><i class="ion-android-checkmark-circle"></i> Calidad </li>
                   <li><i class="ion-android-checkmark-circle"></i> Respeto </li>
-                  
+
                 </ul>
               </div>
               <div class="col-sm-4">
@@ -163,11 +229,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </section><!-- #about -->
-    
+
     <!--==========================
       More Features Section
     ============================-->
@@ -175,7 +241,7 @@
       <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
 
         <div class="section-header">
-          <h3 class="section-title">Nuestros servicios</h3>
+          <h3 class="section-title">NUESTROS SERVICIOS</h3>
           <span class="section-divider"></span>
         </div>
 
@@ -183,8 +249,9 @@
 
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" style="min-height: 235px;">
+
               <div class="icon"><i class="ion-ios-videocam"></i></div>
-              <h4 class="title"><a href="">Sistemas de seguridad total</a></h4>
+              <h4 class="title">SISTEMAS DE SEGURIDAD TOTAL</h4>
               <p class="description">CCTV - Cámaras/DVR/Accesorios</p>
               <p class="description">Alarmas y domótica</p>
               <p class="description">Control de acceso</p>
@@ -193,8 +260,8 @@
 
           <div class="col-lg-6">
             <div class="box wow fadeInRight" style="min-height: 235px;">
-              <div class="icon"><i class="ion-ios-cloud"></i></div>
-              <h4 class="title"><a href="">Soporte Técnico y mantenimiento</a></h4>
+              <div class="icon"><i class="ion-settings"></i></div>
+              <h4 class="title">SOPERTE TÉCNICO Y MANTENIMIENTO</h4>
               <p class="description">Mantenimiento de Software y Hardware</p>
               <p class="description">Recuperación de datos</p>
               <p class="description">Reparación de equipos y accesorios</p>
@@ -204,8 +271,8 @@
 
           <div class="col-lg-6">
             <div class="box wow fadeInLeft" style="min-height: 235px;">
-              <div class="icon"><i class="ion-ios-cog"></i></div>
-              <h4 class="title"><a href="">Software</a></h4>
+              <div class="icon"><i class="ion-ios-filing"></i></div>
+              <h4 class="title">SOFTWARE</h4>
               <p class="description">Licencias eletrónicas</p>
               <p class="description">Sistemas operativos</p>
               <p class="description">Programas y aplicaciones para PC</p>
@@ -215,8 +282,8 @@
 
           <div class="col-lg-6">
             <div class="box wow fadeInRight" style="min-height: 235px;">
-              <div class="icon"><i class="ion-ios-pie"></i></div>
-              <h4 class="title"><a href="">Hardware</a></h4>
+              <div class="icon"><i class="ion-monitor"></i></div>
+              <h4 class="title">HARDWARE</h4>
               <p class="description">Computadoras</p>
               <p class="description">Accesorios</p>
               <p class="description">Almacenamiento</p>
@@ -228,43 +295,45 @@
         </div>
       </div>
     </section><!-- #more-features -->
-    
-   <!--==========================
+
+    <!--==========================
       Pricing Section
     ============================-->
-      <div id="particles-js2"></div>
+    <div id="particles-js2"></div>
     <section id="pricing" class="section-bg">
       <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
 
         <div class="section-header text-center">
-          <h3 class="section-title">Nuestros Productos Ofertados</h3>
+          <h3 class="section-title">PRODUCTOS OFERTADOS</h3>
           <span class="section-divider"></span>
-          <a href="catalogo.html" class="get-started-btn">DESCARGAR CATÁLOGO<span class="ion-ios-arrow-round-forward"></span></a>
-          <p class="section-description" style="margin-bottom: 0;">Vea nuestro catálogo de productos y servicios</p>
+
+
         </div>
 
         <div class="row">
           <div class="col-lg-3 col-md-6" v-for="p in productos">
             <div class="box wow fadeInLeft" style="min-height: 60vh">
-              <div class="contenedor" style="position: relative;display: inline-block;text-align: center;width: 100%;padding: 12px;">
+              <div class="contenedor"
+                style="position: relative;display: inline-block;text-align: center;width: 100%;padding: 12px;">
                 <img :src="`img/${p.img}`" alt="" style="width: 100%;height: 200px;border: 1px solid grey;">
                 <p style="margin: 0;"> <b>{{p.desc}}</b> </p>
               </div>
 
               <div style="padding: 10px;">
-               <ul>
-                 <li v-for="d in p.detalles"><i class="ion-android-checkmark-circle"></i> {{d}} </li>
-               </ul>
+                <ul>
+                  <li v-for="d in p.detalles"><i class="ion-android-checkmark-circle"></i> {{d}} </li>
+                </ul>
               </div>
-             
-              <!-- <a href="#" class="get-started-btn">Get Started</a> -->
+              <a href=# class="get-started-btn">VER CATÁLOGO<span class="ion-ios-arrow-round-forward"></span></a>
             </div>
+            <!-- <a href="#" class="get-started-btn">Get Started</a> -->
           </div>
+
 
         </div>
       </div>
     </section><!-- #pricing -->
-    
+
     <!--==========================
       Product Advanced Featuress Section
     ============================-->
@@ -276,54 +345,119 @@
             <div class="col-12">
               <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-1.jpg" alt="">
               <div class="wow fadeInLeft">
-                <h2>Porque elegirnos</h2>
-                <h3>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de calidad y eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados para cumplir con los requerimientos y la responsabilidad para con nuestros clientes.</h3>
-                <p>Satisfacemos las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios.</p>
-                <p>Somos una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.</p>
+                <div class="section-header">
+                  <h3 class="section-title">¿PORQUE ELEGIRNOS?</h3>
+                  <span class="section-divider"></span>
+                </div>
+
+                <h3>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de
+                  calidad y eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados para
+                  cumplir con los requerimientos y la responsabilidad para con nuestros clientes.</h3>
+                <p>Satisfacemos las necesidades de nuestros clientes con calidad responsabilidad, competitividad,
+                  disponibilidad y soporte a futuro en todos nuestros servicios.</p>
+                <p>Somos una entidad reconocida por la calidad de sus productos y servicios, a través de una red de
+                  operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section><!-- #advanced-features -->
-    
+
 
     <!--==========================
       Gallery Section
     ============================-->
     <section id="gallery">
-      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
-        <div class="section-header">
-          <h3 class="section-title">Generando nuevas experiencias</h3>
-          <span class="section-divider" style="margin-bottom: 0;"></span>
-          <p class="section-description" style="padding-bottom: 0;">Experiencias con nuestros clientes</p>
+      
+      <div class="section-header">
+        <h3 class="section-title">OBJETIVOS CUMPLIDOS</h3>
+        <span class="section-divider" style="margin-bottom: 0;"></span>
+      </div>
+      <div class="container gallery-container">
+
+        <div class="tz-gallery">
+
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp1.jpeg">
+                <img src="img/gallery/wp1.jpeg" alt="Instalacion Camara">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp2.jpeg">
+                <img src="img/gallery/wp2.jpeg" alt="Bridge">
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <a class="lightbox" href="img/gallery/wp3.jpeg">
+                <img src="img/gallery/wp3.jpeg" alt="Tunnel">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp4.jpeg">
+                <img src="img/gallery/wp4.jpeg" alt="Coast">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp5.jpeg">
+                <img src="img/gallery/wp5.jpeg" alt="Rails">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp6.jpeg">
+                <img src="img/gallery/wp6.jpeg" alt="Traffic">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp7.jpeg">
+                <img src="img/gallery/wp7.jpeg" alt="Rocks">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/wp8.jpeg">
+                <img src="img/gallery/wp8.jpeg" alt="Benches">
+              </a>
+            </div>
+
+          </div>
+
         </div>
 
+      </div>
+
+      <!--
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6" v-for="g in galeria">
             <div class="gallery-item wow fadeInUp" style="height: 100%;">
               <a :href="`img/gallery/${g.img}`" class="gallery-popup">
-                <img :src="`img/gallery/${g.img}`" alt="" style="width:100%; min-height: 250px;max-height: 270px;height: 100%;">
+                <img :src="`img/gallery/${g.img}`" alt=""
+                  style="width:100%; min-height: 250px;max-height: 270px;height: 100%;">
               </a>
             </div>
           </div>
-        </div>
+        </div>-->
 
       </div>
-    </section><!-- #gallery -->
+    </section>
 
-<!--==========================
+    <!--==========================
       Contact Section
     ============================-->
     <section id="contact">
       <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
-        <h3 class="text-center">Contáctanos</h3>
+        <div class="section-header">
+          <h3 class="section-title">VISÍTANOS</h3>
+          <span class="section-divider"></span>
+        </div>
+
         <div class="row wow fadeInUp"> </div>
-          <div class="row wow fadeInUp">
+        <div class="row wow fadeInUp">
           <div class="col-md-6 col-xs-12">
             <ul class="nav nav-pills">
-              <li class="nav-item" v-for="s in sedes"><a :class="`nav-link ${s.class}`" data-toggle="tab" href="#tab1"  @Click="sel(s.id)"> {{s.nombre}} </a></li>
+              <li class="nav-item" v-for="s in sedes"><a :class="`nav-link ${s.class}`" data-toggle="tab" href="#tab1"
+                  @Click="sel(s.id)"> {{s.nombre}} </a></li>
             </ul>
             <div class="info" style="margin-top: 12px;">
 
@@ -339,42 +473,31 @@
 
               <div>
                 <i class="ion-ios-telephone-outline"></i>
-                <p style="margin-bottom: 12px;"> <a href="https://wa.me/34612345678" target="_blank" style="color: black;" title="Abrir en WhatsApp">{{sede.tel}}</a> </p>
-              </div>            
+                <p style="margin-bottom: 12px;"> <a href="https://wa.me/34612345678" target="_blank"
+                    style="color: black;" title="Abrir en WhatsApp">{{sede.tel}}</a> </p>
+              </div>
             </div>
 
-            <iframe class="map_dir" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855.6655023343048!2d-64.73196549050392!3d-21.533908827194963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x940647e27fe7d807%3A0x18b96c5d8f69cd6a!2sCYBERCORP%20TARIJA!5e0!3m2!1ses-419!2sbo!4v1574451800076!5m2!1ses-419!2sbo" width="95%" height="300" frameborder="0" style="border:3px solid #E4E4E4;" allowfullscreen=""></iframe>
+            <iframe class="map_dir"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855.6655023343048!2d-64.73196549050392!3d-21.533908827194963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x940647e27fe7d807%3A0x18b96c5d8f69cd6a!2sCYBERCORP%20TARIJA!5e0!3m2!1ses-419!2sbo!4v1574451800076!5m2!1ses-419!2sbo"
+              width="95%" height="300" frameborder="0" style="border:3px solid #E4E4E4;" allowfullscreen=""></iframe>
           </div>
 
           <div class="col-md-6 col-xs-12">
-            <div class="fb-like" 
-            data-href="https://www.facebook.com/cybercorpsrltarija/" 
-            data-width="" 
-            data-layout="standard" 
-            data-action="like" 
-            data-size="large" 
-            data-show-faces="true" 
-            data-share="true" style="text-align: center;width: 100%;margin-bottom: 32px;">
-              
+            <div class="fb-like" data-href="https://www.facebook.com/cybercorpsrltarija/" data-width=""
+              data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"
+              style="text-align: center;width: 100%;margin-bottom: 32px;">
+
             </div>
 
-            <div 
-            class="fb-page" 
-            data-href="https://www.facebook.com/cybercorpsrltarija/" 
-            data-tabs="timeline" 
-            data-width="" 
-            data-height="600" 
-            data-small-header="false" 
-            data-adapt-container-width="true" 
-            data-hide-cover="false" 
-            data-show-facepile="true" style="text-align: center;width: 100%">
-            <blockquote 
-            cite="https://www.facebook.com/cybercorpsrltarija/" 
-            class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/cybercorpsrltarija/">Cybercorp S.R.L</a>
-            </blockquote>
+            <div class="fb-page" data-href="https://www.facebook.com/cybercorpsrltarija/" data-tabs="timeline"
+              data-width="" data-height="600" data-small-header="false" data-adapt-container-width="true"
+              data-hide-cover="false" data-show-facepile="true" style="text-align: center;width: 100%">
+              <blockquote cite="https://www.facebook.com/cybercorpsrltarija/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/cybercorpsrltarija/">Cybercorp S.R.L</a>
+              </blockquote>
             </div>
-            
+
           </div>
 
         </div>
@@ -382,41 +505,39 @@
     </section><!-- #contact -->
 
   </main>
-  
+
   <section class="section-bg text-center" style="padding-bottom: 64px;padding-top: 8px;">
-		<h4>NUESTRA CORPORACION</h4>
-			<div class="row">
-        <div class="col-md-3 col-xs-6 col-sm-6 text-center">
-          <a href="http://www.corporacioncibernetica.edu.bo"> <img class="img-corp" 
-            src="img/xlogo_cca4.png" class="img-responsive" alt="logo"
-            width="100">
-          </a>
-        </div>
-        <div class="col-md-3 col-xs-6 col-sm-6 text-center">
-          <a href="#"> <img class="img-corp" 
-            src="img/logo4.png" class="img-responsive"
-            alt="logo" width="100">
-          </a>
-        </div>
-        <div class="col-md-3 col-xs-6 text-center">
-          <a href="http://www.esam.edu.bo"> <img class="img-corp" 
-            src="img/xlogo_esam_principal4.png" class="img-responsive"
-            alt="logo" width="100">
-          </a>
-        </div>
-				<div class="col-md-3 col-xs-6 text-center">
-					<a href="https://www.facebook.com/CiberKidsTarija/"> <img  class="img-corp" 
-						src="img/xlogo_ciberkids4.png" class="img-responsive"
-						alt="logo" width="100">
-					</a>
-				</div>
-			</div>
-	</section>
+    <div class="section-header">
+      <h3 class="section-title">NUESTRA CORPORACIÓN</h3>
+      <span class="section-divider"></span>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+        <a href="http://www.corporacioncibernetica.edu.bo"> <img class="img-corp" src="img/xlogo_cca4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+        <a href="#"> <img class="img-corp" src="img/logo4.png" class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <a href="http://www.esam.edu.bo"> <img class="img-corp" src="img/xlogo_esam_principal4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <a href="https://www.facebook.com/CiberKidsTarija/"> <img class="img-corp" src="img/xlogo_ciberkids4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!--==========================
     Footer
   ============================-->
- <!--  <footer id="footer">
+  <!--  <footer id="footer">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 text-lg-left text-center">
@@ -433,14 +554,29 @@
     </div>
   </footer> -->
 
+
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <div class="socialbar">
+    <ul>
+      <li><a href="https://www.facebook.com/cybercorpsrltarija" title="facebook" target="_blank"
+          class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="mailto:cybercorp.tarija100719@gmail.com" title="Email" class="icon-mail"><i
+            class="fa fa-envelope"></i></a></li>
+    </ul>
+  </div>
   
-	<div class="socialbar">
-		<ul>
-			<li><a href="https://www.facebook.com/cybercorpsrltarija" title="facebook" target="_blank" class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="mailto:cybercorp.tarija100719@gmail.com" title="Email" class="icon-mail"><i class="fa fa-envelope"></i></a></li>
-		</ul>
-	</div>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate.min.js"></script>
   <script src="js/easing.min.js"></script>
@@ -453,9 +589,10 @@
   <script src="js/particles.js"></script>
   <script src="js/vue.js"></script>
   <script src="js/particulas.js"></script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v5.0"></script>
-  
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v5.0"></script>
 
+  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
   <scipt src="https://www.gstatic.com/firebasejs/init.js"></scipt>
   <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
@@ -473,117 +610,229 @@
     };
     firebase.initializeApp(firebaseConfig);
     particulas();
+    var app = new Vue({
+      el: '#app',
+      data: {
+        currentSlide: 0,
+        isPreviousSlide: false,
+        isFirstLoad: true,
+        slides: [
+          {
+            headlineFirstLine: "MISION",
+            headlineSecondLine: "Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios",
+            sublineFirstLine: "Nihil sub sole",
+            sublineSecondLine: "novum",
+            bgImg: "img/cam.jpg",
+            rectImg: "img/cam.jpg"
+          },
+          {
+            headlineFirstLine: "VISIÓN",
+            headlineSecondLine: "Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.",
+            sublineFirstLine: "Il n'y a rien de neuf sous",
+            sublineSecondLine: "le soleil",
+            bgImg: "img/cerco.jpg",
+            rectImg: "img/cerco.jpg"
+          },
+          {
+            headlineFirstLine: "Nullam",
+            headlineSecondLine: "Ultricies",
+            sublineFirstLine: "Τίποτα καινούργιο κάτω από",
+            sublineSecondLine: "τον ήλιο",
+            bgImg: "img/visiona.jpg",
+            rectImg: "https://i.postimg.cc/3JFLGMRF/slide-rect2.jpg"
+          }
+        ]
+      },
+      mounted: function () {
+        var productRotatorSlide = document.getElementById("app");
+        var startX = 0;
+        var endX = 0;
 
+        productRotatorSlide.addEventListener("touchstart", (event) => startX = event.touches[0].pageX);
+
+        productRotatorSlide.addEventListener("touchmove", (event) => endX = event.touches[0].pageX);
+
+        productRotatorSlide.addEventListener("touchend", function (event) {
+          var threshold = startX - endX;
+
+          if (threshold < 150 && 0 < this.currentSlide) {
+            this.currentSlide--;
+          }
+          if (threshold > -150 && this.currentSlide < this.slides.length - 1) {
+            this.currentSlide++;
+          }
+        }.bind(this));
+      },
+      methods: {
+        updateSlide(index) {
+          index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
+          this.currentSlide = index;
+          this.isFirstLoad = false;
+        }
+      }
+    })
     var app = new Vue({
       el: '#pricing',
       data: {
         productos: [
-          { desc:"Videovigilancia",img:"ofe13.jpg",detalles:
-            ["Cámaras Analógicas","Cámaras IP","Gradores Analógicos","Gradores IP"] },
-          { desc:"Control de Acceso",img:"ofe14.jpg",detalles:
-            ["Biométricos","Video Porteros","Cerraduras"] },
+          {
+            desc: "Videovigilancia", img: "ofe13.jpg", detalles:
+              ["Cámaras Analógicas", "Cámaras IP", "Gradores Analógicos", "Gradores IP"]
+          },
+          {
+            desc: "Control de Acceso", img: "ofe14.jpg", detalles:
+              ["Biométricos", "Video Porteros", "Cerraduras"]
+          },
 
-            { desc:"Alarmas y Protección Perimetral",img:"ofe15.jpg",detalles:
-            ["Alarmas","Sensores","Cercos Eléctricos"] },
+          {
+            desc: "Alarmas y Protección Perimetral", img: "ofe15.jpg", detalles:
+              ["Alarmas", "Sensores", "Cercos Eléctricos"]
+          },
 
-          { desc:"Equipos de Computación",img:"ofe10.jpg",detalles:
-            ["Venta de Computadoras de Escritorio" ,
-              "Estabilizadores, Ups",
-              "Televisores"] },
+          {
+            desc: "Equipos de Computación", img: "ofe10.jpg", detalles:
+              ["Venta de Computadoras de Escritorio",
+                "Estabilizadores, Ups",
+                "Televisores"]
+          },
 
-          { desc:"Kits de Robótica",img:"ofe5.jpg",
-          detalles:
-            ["Arduinos",
-            "Módulos y sensores",
-            "Protoboard, baterias y leds",
-            "Cables y conectores"] },
+          {
+            desc: "Kits de Robótica", img: "ofe5.jpg",
+            detalles:
+              ["Arduinos",
+                "Módulos y sensores",
+                "Protoboard, baterias y leds",
+                "Cables y conectores"]
+          },
 
-          { desc:"Portátiles",img:"ofe16.jpg",detalles:
-            ["Portátil HP",
-             "Portátil Lenovo",
-             "Portátil Dell Inspiron"] },
-     
-        
-           { desc:"Impresoras",img:"ofe11.jpg",detalles:
-            ["Impresoras Epson L3110" ,
-          "Impresoras Epson L5190",
-          "Tintas"] },
+          {
+            desc: "Portátiles", img: "ofe16.jpg", detalles:
+              ["Portátil HP",
+                "Portátil Lenovo",
+                "Portátil Dell Inspiron"]
+          },
 
-          { desc:"Celulares y accesorios",img:"ofe8.jpg",detalles:
-            ["Venta de teléfonos celulares","Accesorios","Audifonos","Parlantes"] },
+
+          {
+            desc: "Impresoras", img: "ofe11.jpg", detalles:
+              ["Impresoras Epson L3110",
+                "Impresoras Epson L5190",
+                "Tintas"]
+          },
+
+          {
+            desc: "Celulares y accesorios", img: "ofe8.jpg", detalles:
+              ["Venta de teléfonos celulares", "Accesorios", "Audifonos", "Parlantes"]
+          },
 
 
         ],
       },
       methods: {
-        cargar(){
+        cargar() {
           var vue = this;
           var db = firebase.firestore();
-          var dbcategorias = db.collection("sedes").doc('tarija2').collection("articulos").orderBy("catenom","desc").limit(6);
+          var dbcategorias = db.collection("sedes").doc('tarija2').collection("articulos").orderBy("catenom", "desc").limit(6);
           dbcategorias.get().then((querySnapshot) => {
-              querySnapshot.forEach((doc) => {
-                  var obj = doc.data();
-                  obj.id = doc.id;
-                  vue.productos.push( obj );
-              });
+            querySnapshot.forEach((doc) => {
+              var obj = doc.data();
+              obj.id = doc.id;
+              vue.productos.push(obj);
+            });
 
-              console.log( vue.productos );
+            console.log(vue.productos);
           });
         }
       },
-      mounted(){
+      mounted() {
         //this.cargar();
       }
 
     });
 
-    var app = new Vue({
-      el: '#gallery',
-      data: {
-        galeria: [
-        {img: "WhatsApp Image 2019-11-25 at 14.58.20.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.18.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.19.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.21.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.23.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.24.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.25 (1).jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.25 (2).jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.25.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.26 (1).jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.27.jpeg" },
-        {img: "WhatsApp Image 2019-11-25 at 14.58.28 (1).jpeg" },
-        ],
-      },
-      methods: {},
-      mounted(){}
-    });
+    /*  var app = new Vue({
+        el: '#gallery',
+        data: {
+          galeria: [
+            { img: "WhatsApp Image 2019-11-25 at 14.58.20.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.18.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.19.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.21.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.23.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.24.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25 (1).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25 (2).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.26 (1).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.27.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.28 (1).jpeg" },
+          ],
+        },
+        methods: {},
+        mounted() { }
+      });*/
 
 
     var app3 = new Vue({
       el: '#contact',
       data: {
-        sedes:[
-          {id:1,nombre:"Tarija",direccion:'Calle Suipacha #667 entre Ingavi y La Madrid.',correo:'cybercorp.tarija100719@gmail.com',tel:"67370323"},
-          {id:2,nombre:"Sucre",direccion:'Calle San Alberto #66 zona central',correo:'cybercorpcentral@gmail.com',tel:"72853579"},
-          {id:3,nombre:"Potosi",direccion:'Calle Bolívar esquina lidiustares #1246',correo:'cybercorpotosi321@gmail.com',tel:"67370321"},
+        sedes: [
+          { id: 1, nombre: "Tarija", direccion: 'Calle Suipacha #667 entre Ingavi y La Madrid.', correo: 'cybercorp.tarija100719@gmail.com', tel: "67370323" },
+          { id: 2, nombre: "Sucre", direccion: 'Calle San Alberto #66 zona central', correo: 'cybercorpcentral@gmail.com', tel: "72853579" },
+          { id: 3, nombre: "Potosi", direccion: 'Calle Bolívar esquina lidiustares #1246', correo: 'cybercorpotosi321@gmail.com', tel: "67370321" },
         ],
         sede: {},
       },
       methods: {
-        sel: function( id ){
-          this.sedes.forEach( function(e){e.class='';} );
-          this.sede = this.sedes.find(x=>x.id==id);
+        sel: function (id) {
+          this.sedes.forEach(function (e) { e.class = ''; });
+          this.sede = this.sedes.find(x => x.id == id);
           this.sede.class = 'active';
         },
       },
-      mounted(){
-        this.sede= this.sedes[0];
+      mounted() {
+        this.sede = this.sedes[0];
         this.sede.class = 'active';
       }
     });
 
   </script>
+  <script>
+
+    function typeEffect(element, speed) {
+      var text = element.innerHTML;
+      element.innerHTML = "";
+
+      var i = 0;
+      var timer = setInterval(function () {
+        if (i < text.length) {
+          element.append(text.charAt(i));
+          i++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+    }
+
+
+    // application
+    var speed = 100;
+    var h1 = document.querySelector('h3', 'h2');
+    var p = document.querySelector('p');
+    var delay = h1.innerHTML.length * speed + speed;
+
+    // type affect to header
+    typeEffect(h1, speed);
+
+
+    // type affect to body
+    setTimeout(function () {
+      p.style.display = "inline-block";
+      typeEffect(p, speed);
+    }, delay);
+
+  </script>
 
 </body>
+
 </html>

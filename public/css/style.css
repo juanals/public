@@ -23,6 +23,11 @@ body {
 a {
   color: #1dc8cd;
   transition: 0.5s;
+} 
+li{
+  text-align: justify !important;
+  font-family: "fuente1";
+  font-size: 18px;
 }
 
 a:hover,
@@ -36,6 +41,9 @@ a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
+  text-align: justify !important;
+  font-family: "fuente1";
+  font-size: 18px;
 }
 
 h1,
@@ -44,12 +52,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "fuente1" !important;
   font-weight: 400;
+    text-align: center;
   margin: 0 0 20px 0;
   padding: 0;
 }
-
+.h2, h2{
+  font-size: 35px;
+  color: #005c7a;;
+}
 /* Back to top button */
 
 .back-to-top {
@@ -180,7 +192,7 @@ h6 {
 }
 
 #intro .btn-get-started {
-  font-family: "Montserrat", sans-serif;
+  font-family: "fuente1";
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;
@@ -252,6 +264,7 @@ h6 {
 }
 
 .nav-menu li {
+  
   position: relative;
   white-space: nowrap;
 }
@@ -311,6 +324,7 @@ h6 {
   font-weight: 400;
   font-size: 14px;
   outline: none;
+  font-family: "fuente1" !important;
 }
 
 .nav-menu > li {
@@ -323,7 +337,9 @@ h6 {
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   background: #fff;
 }
-
+.nav-menu a:hover{
+  color: #59c2c5 !important;
+}
 .nav-menu ul li {
   transition: 0.3s;
 }
@@ -461,10 +477,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .section-header .section-title {
-  font-size: 32px;
-  color: #111;
-  text-align: center;
-  font-weight: 400;
+  font-size: 3em !important;
+  color: #005c7a;
+  text-align: center !important;
+  font-weight: 400 !important;
+  font-family: "fuente1" !important;
 }
 
 .section-header .section-description {
@@ -478,8 +495,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   width: 60px;
   height: 3px;
-  background: #1dc8cd;
-  background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+  background: #59c2c5;
+  background: linear-gradient(0deg, #1d212914 0%, #59c2c5 100%);
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -495,7 +512,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #about {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -715,11 +732,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .box {
-  padding: 40px;
+  padding: 35px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
   transition: 0.4s;
+  
 }
 
 #more-features .icon {
@@ -734,8 +752,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features .icon i:before {
-  background: #1dc8cd;
+  background: #59c2c5;
   background-clip: border-box;
+  padding-top: 35px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -743,8 +762,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 #more-features h4 {
   margin-left: 100px;
   font-weight: 700;
+  text-align: left;
+  color: #005c7a;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #more-features h4 a {
@@ -752,7 +773,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #more-features p {
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 100px;
   margin-bottom: 0;
   line-height: 24px;
@@ -792,7 +813,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #pricing .box {
-  //padding: 40px;
+  padding: 40px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
@@ -850,7 +871,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "fuente1";
 }
 
 #pricing .featured {
@@ -858,7 +879,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #pricing .get-started-btn{
-  background: linear-gradient(45deg, #d60003, #1dc8cd);
+  background: linear-gradient(45deg, #005c7a,#1dc8cd);
 }
 
 /* Frequently Asked Questions Section
@@ -966,7 +987,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Gallery Section
 --------------------------------*/
-
+/*
 #gallery {
   background: #fff;
   padding: 60px 0 0 0;
@@ -1010,7 +1031,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #gallery .gallery-item:hover .gallery-overlay {
   opacity: 1;
   background: rgba(0, 0, 0, 0.7);
-}
+}*/
 
 /* Contact Section
 --------------------------------*/
@@ -1353,7 +1374,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 .fuente{
     font-family: "fuente"
 }
+@font-face {
+  font-family: 'fuente1';
+  src: url('../fonts/Gidole-Regular.otf') format('truetype');
+  font-weight: bold;
+  font-size: 50px !important;
 
+}
+.fuente1{
+    font-family: "fuente1"
+}
 
 
 
