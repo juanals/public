@@ -32,8 +32,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="css/headline.css">
-
-
+  <!-- CSS File set2 -->
+  
+  <link rel="stylesheet" type="text/css" href="css/set2.css" />
 
   <style>
     #particles-js,
@@ -135,45 +136,46 @@
     ============================-->
     <section id="about" class="section-bg">
       <div class="container gallery-container1">
-      <div class="section-header">
-        <h3 class="section-title">ACERCA DE NOSOTROS</h3>
-        <span class="section-divider"></span>
-      </div>
-      <div id="app" class="wrapper" v-cloak v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
-        <div class="slide-wrapper" 
-             v-for="(slide, index) in slides" 
-             v-bind:class="{ active: index === currentSlide }"
-             v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
-            <div class="slide-inner">
-                <div class="slide-bg-text">
-                    <h2>{{ slide.headlineFirstLine }}</h2>
-                    <p>{{ slide.headlineSecondLine }}</p>
-                </div>
-                <div class="slide-rect-filter">
-                    <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
-                </div>
-                <div class="slide-content">
-                    <h1 class="slide-content-text"><h2>{{ slide.headlineFirstLine }}</h2><p>{{ slide.headlineSecondLine }}</p></h1></div>
-                <h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2></div>
+        <div class="section-header">
+          <h3 class="section-title">ACERCA DE NOSOTROS</h3>
+          <span class="section-divider"></span>
         </div>
-    <div class="controls-container">
-        <button class="controls-button" 
-                v-for="(slide, index) in slides"
-                v-bind:class="{ active: index === currentSlide }"
-                v-on:click="updateSlide(index)">{{ slide.headlineFirstLine }} </button>
-    </div>
-    <div class="pagination-container">
-        <span class="pagination-item"
-              v-for="(slide, index) in slides"
+        <div id="app" class="wrapper" v-cloak
+          v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}" >
+          <div class="slide-wrapper" v-for="(slide, index) in slides" v-bind:class="{ active: index === currentSlide }"
+            v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
+            <div class="slide-inner" >
+              <div class="slide-bg-text" >
+                <h2>{{ slide.headlineFirstLine }}</h2>
+                <p>{{ slide.headlineSecondLine }}</p>
+              </div>
+              <!--<div class="slide-rect-filter">
+                    <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
+                </div>-->
+              <div class="slide-content">
+                <h1 class="slide-content-text">
+                  <h2>{{ slide.headlineFirstLine }}</h2>
+                  <p>{{ slide.headlineSecondLine }}</p>
+                </h1>
+              </div>
+              <!--<h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2>-->
+            </div>
+          </div>
+          <div class="controls-container">
+            <button class="controls-button" v-for="(slide, index) in slides"
               v-bind:class="{ active: index === currentSlide }"
-              v-on:click="updateSlide(index)"></span>
-    </div>
-</div>
-</div>
+              v-on:click="updateSlide(index)" >{{ slide.headlineFirstLine }} </button>
+          </div>
+          <div class="pagination-container">
+            <span class="pagination-item" v-for="(slide, index) in slides"
+              v-bind:class="{ active: index === currentSlide }" v-on:click="updateSlide(index)"></span>
+          </div>
+        </div>
+      </div>
     </section>
-    
 
-   <!-- <section id="about" class="section-bg">
+
+    <!-- <section id="about" class="section-bg">
       <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
         <div class="section-header">
           <h3 class="section-title">ACERCA DE NOSOTROS</h3>
@@ -231,7 +233,7 @@
           </div>
         </div> -->
 
-      </div>
+    </div>
     </section><!-- #about -->
 
     <!--==========================
@@ -328,9 +330,8 @@
             </div>
             <!-- <a href="#" class="get-started-btn">Get Started</a> -->
           </div>
-
-
         </div>
+
       </div>
     </section><!-- #pricing -->
 
@@ -364,12 +365,65 @@
       </div>
     </section><!-- #advanced-features -->
 
+    <!--==========================
+      Cursos Section
+    ============================-->
+    
+    <section id="cursos" class="section-bg">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+
+        <div class="section-header text-center">
+          <h3 class="section-title">CURSOS VIRTUALES</h3>
+          <span class="section-divider"></span>
+
+
+        </div>
+
+        <div class="grid1">
+          <figure class="effect-terry">
+            <img src="img/cursomant.jpg" alt="img16" />
+            <figcaption>
+              <h2>Descargar <span>PDF</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-download"></i></a>
+                
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-terry">
+            <img src="img/cursorob.jpeg" alt="img26" />
+            <figcaption>
+              <h2>Descargar <span>PDF</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-download"></i></a>
+                <a href="#"><i class="fa fa-fw fa-heart"></i></a>
+                <a href="#"><i class="fa fa-fw fa-share"></i></a>
+                <a href="#"><i class="fa fa-fw fa-tags"></i></a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-terry">
+            <img src="img/cursocam.jpeg" alt="img26" />
+            <figcaption>
+              <h2>Descargar <span>PDF</span></h2>
+              <p>
+                <a href="#"><i class="fa fa-fw fa-download"></i></a>
+                <a href="#"><i class="fa fa-fw fa-heart"></i></a>
+                <a href="#"><i class="fa fa-fw fa-share"></i></a>
+                <a href="#"><i class="fa fa-fw fa-tags"></i></a>
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section><!-- #pricing -->
 
     <!--==========================
       Gallery Section
     ============================-->
     <section id="gallery">
-      
+
       <div class="section-header">
         <h3 class="section-title">OBJETIVOS CUMPLIDOS</h3>
         <span class="section-divider" style="margin-bottom: 0;"></span>
@@ -565,10 +619,10 @@
             class="fa fa-envelope"></i></a></li>
     </ul>
   </div>
-  
 
 
-  
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -598,6 +652,13 @@
   <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
 
+  <script>
+    // For Demo purposes only (show hover effect on mobile devices)
+    [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+      el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+    } );
+  </script>
+
   <script defer type="text/javascript">
     const firebaseConfig = {
       apiKey: "AIzaSyDX00dTs3tgbuFwZwbmz7AfS3a3clAe9fY",
@@ -618,27 +679,27 @@
         isFirstLoad: true,
         slides: [
           {
-            headlineFirstLine: "MISION",
+            headlineFirstLine: "MISIÓN",
             headlineSecondLine: "Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios",
             sublineFirstLine: "Nihil sub sole",
             sublineSecondLine: "novum",
-            bgImg: "img/cam.jpg",
-            rectImg: "img/cam.jpg"
+            bgImg: "img/Mision-compressor.jpg",
+            rectImg: "img/cyberpru.jpeg"
           },
           {
             headlineFirstLine: "VISIÓN",
             headlineSecondLine: "Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.",
             sublineFirstLine: "Il n'y a rien de neuf sous",
             sublineSecondLine: "le soleil",
-            bgImg: "img/cerco.jpg",
+            bgImg: "img/Vision-compressor.jpg",
             rectImg: "img/cerco.jpg"
           },
           {
-            headlineFirstLine: "Nullam",
-            headlineSecondLine: "Ultricies",
+            headlineFirstLine: "VALORES",
+            headlineSecondLine: "[",
             sublineFirstLine: "Τίποτα καινούργιο κάτω από",
             sublineSecondLine: "τον ήλιο",
-            bgImg: "img/visiona.jpg",
+            bgImg: "img/Valores-compressor.jpg",
             rectImg: "https://i.postimg.cc/3JFLGMRF/slide-rect2.jpg"
           }
         ]
@@ -825,7 +886,11 @@
     typeEffect(h1, speed);
 
 
+
+
+
     // type affect to body
+    //typeEffect(p, speed);
     setTimeout(function () {
       p.style.display = "inline-block";
       typeEffect(p, speed);
