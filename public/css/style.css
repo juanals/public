@@ -47,7 +47,13 @@ p {
 }
 #intro .fuente{
   text-align: center !important;
-  ;
+    
+}
+#intro .fuenteslogan{
+  text-align: center !important;
+font-style: italic;
+  
+  
 }
 h1,
 h2,
@@ -226,7 +232,7 @@ h6 {
 #intro .product-screens .product-screen-1 {
   z-index: 30;
   bottom: 0;
-  top: 30px;
+  top: 20px;
 }
 
 #intro .product-screens .product-screen-2 {
@@ -515,9 +521,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about {
   padding: 30px 0;
+  height: 500px;
   overflow: hidden;
 }
 
+
+/*
 #about .about-img {
   height: 510px;
   overflow: hidden;
@@ -564,7 +573,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .content ul li {
   padding-bottom: 10px;
 }
-
+*/
 /* Product Featuress Section
 --------------------------------*/
 
@@ -1367,7 +1376,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .socialbar ul li a:hover {
 	padding: 10px 30px;
 }
-
+ #caja1{
+   background-color: pink;
+   color: white;
+ }
 
 
 
@@ -1402,6 +1414,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 }
 .fuente1{
+    font-family: "fuente1"
+}
+@font-face {
+  font-family: 'fuente2';
+  src: url('../fonts/consola.ttf') format('truetype');
+  font-weight: lighter !important;
+ 
+
+}
+.fuenteslogan{
     font-family: "fuente1"
 }
 

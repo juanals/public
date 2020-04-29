@@ -91,7 +91,7 @@
 /*---------------*/
 
 figure.effect-julia {
-	background: #002f3f;
+	background: #0e88ab;
 }
 
 figure.effect-julia img {
@@ -117,7 +117,7 @@ figure.effect-julia p {
 	margin: 0 0 0.25em;
 	padding: 0.4em 1em;
 	background: rgba(255,255,255,0.9);
-	color: #002f3f;
+	color: #0e88ab;
 	text-transform: none;
 	font-weight: 500;
 	font-size: 75%;
@@ -373,7 +373,7 @@ figure.effect-winston p {
 
 figure.effect-winston a {
 	margin: 0 10px;
-	color: #002f3f;
+	color: #0e88ab;
 	font-size: 170%;
 }
 
@@ -493,7 +493,7 @@ figure.effect-terry figcaption::after {
 	width: 200%;
 	height: 200%;
 	border-style: solid;
-	border-color: #002f3f;
+	border-color: #0e88ab;
 	content: '';
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -762,7 +762,7 @@ figure.effect-apollo:hover p {
 /*-----------------*/
 
 figure.effect-kira {
-	background: #fff;
+	background: #002f3f;
 	text-align: left;
 }
 

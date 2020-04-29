@@ -1,8 +1,8 @@
 
 
 .container.gallery-container {
-    margin-top: 50px;
-    background-image: linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
+    margin-top: 30px;
+    background-image: linear-gradient(to top, #002f3f 0%, #002f3f 75%, #0e88ab 100%);
     min-height: 100vh;
     font: normal 16px sans-serif;
     padding: 60px 0;
@@ -12,21 +12,10 @@
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
-.container.gallery-container1 {
-    background-image: linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
-    min-height: 100vh;
-    font: normal 16px sans-serif;
-    padding: 6px 0;
-    background-color: #fff;
-    color: #35373a;
-    min-height: 100vh;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
-   
-}
+
 .gallery-container h1 {
     text-align: center;
-    margin-top: 700px;
+    margin-top: 70px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: bold;
 }
