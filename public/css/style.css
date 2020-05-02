@@ -684,7 +684,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #advanced-features .advanced-feature-img-right {
-  max-width: 100%;
+  max-width: 500px;
+  max-height: 500px;
   float: right;
   padding: 0 0 30px 30px;
 }
@@ -1426,7 +1427,33 @@ body.mobile-nav-active #mobile-nav-toggle {
 .fuenteslogan{
     font-family: "fuente1"
 }
+.blog-card{
+  
+    
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 0 3px 7px -1px #002f3f;
+    margin-bottom: 1.6%;
+    background: #fff;
+    line-height: 1.4;
+    font-family: "fuente1";
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 0;
 
+}
+.descriptionp{
+  margin-top: 20px;
+  line-height: 24px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #777;
+  margin-bottom:5 px;
+
+}
 
 
 
