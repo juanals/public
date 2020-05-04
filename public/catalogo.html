@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>CYBERCORP</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="tecnología,seguridad,cámaras,hardware,software">
   <meta content="" name="hardware y software">
+  <meta name="theme-color" content="#00324C">
 
   <!-- Favicons -->
   <link href="img/favicon.ico" rel="icon">
   <link href="img/favicon.ico" rel="apple-touch-icon">
 
   <!-- CSS File -->
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/ionicons.min.css" rel="stylesheet">
   <link href="css/magnific-popup.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style_catalogo.css" rel="stylesheet">
+
+   <!-- CSS File headline -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+   <link rel="stylesheet" href="css/headline.css">
+
+  <!-- CSS File catalogo -->
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="css/main_styles_catalogo.css">
+<link rel="stylesheet" type="text/css" href="css/responsive_catalogo.css">
 
   <!-- =======================================================
     Theme Name: Avilon
@@ -25,6 +41,17 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+
+  <style>
+    #particles-js,
+    #particles-js2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -34,43 +61,419 @@
   ============================-->
   <header id="header">
     <div class="container">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto fuente">CYBERCORP</a></h1>
+      <div class="row">
+       <div class="col">
+        <div id="logo" class="pull-left">
+          <h1><a href="#intro" class="scrollto fuente">CYBERCORP</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""></a> -->
-      </div>
+        </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="fuente" style="margin-right: 8px;font-size: 12px;">Volver al Inicio</a></li>
-          <li><a href="#about" class="fuente">Seguridad</a></li>
-          <li><a href="#more-features" class="fuente">Computadoras</a></li>
-          <li><a href="#pricing" class="fuente">Accesorios</a></li>
-          <li><a href="#contact" class="fuente">Robotica</a></li>
-          
-        </ul>
-      </nav><!-- #nav-menu-container -->
+      <nav class="main_nav">
+          <ul>
+            <li><a  href="index.html">Volver al Inicio</a></li>
+
+            <li class="hassubs active">
+              <a href="categories.html">Videovigilancia</a>
+              <ul>
+                    <li><a href="#camaranaloga">Cámaras Analógicas</a></li>
+                    <li><a href="categories.html">Cámaras IP</a></li>
+                    <li><a href="categories.html">Grabadores Analógicos</a></li>
+                    <li><a href="categories.html">Grabadores IP</a></li>
+              </ul>
+            </li>
+            <li class="hassubs">
+                <a href="categories.html">Control de Acceso</a>
+                <ul>
+                  <li><a href="categories.html">Biométricos</a></li>
+                  <li><a href="categories.html">Video Porteros</a></li>
+                  <li><a href="categories.html">Cerraduras</a></li>
+                </ul>
+              </li>
+              <li class="hassubs">
+                <a href="#">Alarmas</a>
+                <ul>
+                    <li><a href="categories.html">Alarmas</a></li>
+                    <li><a href="categories.html">Sensores</a></li>
+                    <li><a href="categories.html">Cercos Electricos</a></li>
+                  </ul>
+              </li>
+              <li class="hassubs">
+                <a href="#">Computadoras</a>
+                <ul>
+                    <li><a href="categories.html">Computadora de escritorio</a></li>
+                    <li><a href="categories.html">Monitores</a></li>
+                    <li><a href="categories.html">Portátiles</a></li>
+                  </ul>
+              </li>
+              <li class="hassubs">
+                <a href="#">Robótica</a>
+                <ul>
+                    <li><a href="categories.html">Arduinos</a></li>
+                    <li><a href="categories.html">Módulos</a></li>
+                    <li><a href="categories.html">Protoboard</a></li>
+                  </ul>
+              </li>
+              <li class="hassubs">
+                  <a href="#">Impresoras</a>
+                  <ul>
+                      <li><a href="categories.html">Impresoras</a></li>
+                      <li><a href="categories.html">Tintas</a></li>
+                    </ul>
+                </li>
+                <li class="hassubs">
+                    <a href="#">Celulares</a>
+                    <ul>
+                        <li><a href="categories.html">Celulares</a></li>
+                        <li><a href="categories.html">Accesorios</a></li>
+                      </ul>
+                  </li>
+
+
+          </ul>
+        </nav>
+
+      </div>
     </div>
-  </header><!-- #header -->
+    </div>
+  </header>  <!-- #header --> 
 
   <!--==========================
     Intro Section
   ============================-->
-  
 
   <main id="main">
-
     <section id="pricing" class="section-bg">
       <div class="container">
 
         <div class="section-header text-center">
-          <h3 class="section-title">Nuestros Productos</h3>
+          <h3 class="section-title">Catálogo de Productos</h3>
           <span class="section-divider"></span>
-          
-          <p class="section-description">Vea nuestro catálogo de productos y servicios</p>
         </div>
 
+      <!-- <div class="header_extra ml-auto">
+            <div class="shopping_cart">
+              <a href="cart.html">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                  <g>
+                    <path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                      c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                      C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                      H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                      c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+                  </g>
+                </svg>
+                <div>Cart <span>(0)</span></div>
+              </a>
+            </div>-->
+           <!-- <div class="search">
+              <div class="search_icon">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;"
+                 xml:space="preserve">
+                <g>
+                  <path d="M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087
+                    c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826
+                    C254.246,5.285,228.217,0.003,200.999,0.003c-27.216,0-53.247,5.282-78.085,15.847C98.072,26.412,76.66,40.689,58.673,58.676
+                    c-17.989,17.987-32.264,39.403-42.827,64.241C5.282,147.758,0,173.786,0,201.004c0,27.216,5.282,53.238,15.846,78.083
+                    c10.562,24.838,24.838,46.247,42.827,64.234c17.987,17.993,39.403,32.264,64.241,42.832c24.841,10.563,50.869,15.844,78.085,15.844
+                    c41.879,0,79.852-11.807,113.922-35.405l97.929,97.641c6.852,7.231,15.406,10.849,25.693,10.849
+                    c9.897,0,18.467-3.617,25.694-10.849c7.23-7.23,10.848-15.796,10.848-25.693C475.088,428.458,471.567,419.889,464.524,412.846z
+                     M291.363,291.358c-25.029,25.033-55.148,37.549-90.364,37.549c-35.21,0-65.329-12.519-90.36-37.549
+                    c-25.031-25.029-37.546-55.144-37.546-90.36c0-35.21,12.518-65.334,37.546-90.36c25.026-25.032,55.15-37.546,90.36-37.546
+                    c35.212,0,65.331,12.519,90.364,37.546c25.033,25.026,37.548,55.15,37.548,90.36C328.911,236.214,316.392,266.329,291.363,291.358z
+                    "/>
+                </g>
+              </svg>
+              </div>
+            </div>
+            <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+          </div>-->
+    
+<!-- Search Panel -->
+<!--<div class="search_panel trans_300">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
+          <form action="#">
+            <input type="text" class="search_input" placeholder="Search" required="required">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- Social
+<div class="header_social">
+  <ul>
+    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+</header> -->
+
+
+
+<!-- Home -->
+
+<div class="home">
+<div class="home_slider_container">
+  
+  <!-- Home Slider -->
+  <div class="owl-carousel owl-theme home_slider">
+    
+    <!-- Slider Item -->
+    <div class="owl-item home_slider_item">
+      <div class="home_slider_background" style="background-image:url(img/catalogo/pp2.jpg)"></div>
+      <div class="home_slider_content_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                <div class="home_slider_title">Nuevos Productos.</div>
+                <div class="home_slider_subtitle">Lo mejor en productos de tecnología.</div>
+                <div class="button button_light home_button"><a href="#">Compra Ahora</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Item -->
+    <div class="owl-item home_slider_item">
+      <div class="home_slider_background" style="background-image:url(img/catalogo/pp3.jpg)"></div>
+      <div class="home_slider_content_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                <div class="home_slider_title">Nuevos Productos.</div>
+                <div class="home_slider_subtitle">Lo mejor en productos de tecnología..</div>
+                <div class="button button_light home_button"><a href="#">Compra Ahora</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Item -->
+    <div class="owl-item home_slider_item">
+      <div class="home_slider_background" style="background-image:url(img/Catalogo/pp1.jpg)"></div>
+      <div class="home_slider_content_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+                <div class="home_slider_title">Nuevos Productos.</div>
+                <div class="home_slider_subtitle">Lo mejor en productos de tecnología.</div>
+                <div class="button button_light home_button"><a href="#">Compra Ahora</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Home Slider Dots -->
+  
+  <div class="home_slider_dots_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="home_slider_dots">
+            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+              <li class="home_slider_custom_dot active">01.</li>
+              <li class="home_slider_custom_dot">02.</li>
+              <li class="home_slider_custom_dot">03.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>	
+  </div>
+
+</div>
+</div>
+
+<!-- Ads -->
+
+<div class="avds">
+<div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
+  <div class="avds_small">
+    <div class="avds_background" style="background-image:url(img/catalogo/phone.jpg)"></div>
+    <div class="avds_small_inner">
+      <div class="avds_discount_container">
+        <img src="img/catalogo/descuento.png" alt="">
+        <div>
+          <div class="avds_discount">
+            <div>20<span>%</span></div>
+            <div>Descuento</div>
+          </div>
+        </div>
+      </div>
+      <div class="avds_small_content">
+        <div class="avds_title">Celulares Smart</div>
+        <div class="avds_link"><a href="categories.html">Ver más</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="avds_large">
+    <div class="avds_background" style="background-image:url(img/catalogo/camara_pro.jpg)"></div>
+    <div class="avds_large_container">
+      <div class="avds_large_content">
+        <div class="avds_title">Cámaras Profesionales</div>
+        <div class="avds_text">La α6600 ofrece unas funciones y un rendimiento fantásticos en su cuerpo compacto, con la velocidad de enfoque automático más rápida del mundo2, amplia cobertura de enfoque automático y seguimiento del sujeto.</div>
+        <div class="avds_link avds_link_large"><a href="categories.html">Ver más</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Products -->
+
+<div class="products">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+      <div class="product_grid">
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/videovigilancia.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Videovigilancia</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/acceso.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Control de Acceso</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/alarmas.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Alarmas y Protección Perimetral</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/computacion.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Equipos de Computación</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/robotica.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Kits de Robótica</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/portatiles.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Portátiles</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/impresora.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Impresoras</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div class="product">
+          <div class="product_image"><img src="img/catalogo/celular.jpeg" alt=""></div>
+          <div class="product_content">
+            <div class="product_title"><a href="categories.html">Celulares y accesorios</a></div>
+            <div class="product_price"></div>
+          </div>
+        </div>
+
+      </div>
+        
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Ad -->
+
+<div class="avds_xl">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="avds_xl_container clearfix">
+        <div class="avds_xl_background" style="background-image:url(img/catalogo/avds_xl.jpg)"></div>
+        <div class="avds_xl_content">
+          <div class="avds_title">Dispositivos Increibles</div>
+          <div class="avds_text">Audífonos con noise cancelling 1000XM2 inalámbricos.</div>
+          <div class="avds_link avds_xl_link"><a href="categories.html">Ver más</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<!--<div class="footer_overlay"></div>
+   <footer class="footer">
+     <div class="footer_background" style="background-image:url(img/catalogo/footer.jpg)"></div>
+       <div class="container">
+        <div class="row">
+         <div class="col">
+          <div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
+            <div class="footer_logo"><a href="#">Cybercorp</a></div>
+          <div class="copyright ml-auto mr-auto"> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Cybercorp</a>
+        Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><!--</div>
+        <div class="footer_social ml-lg-auto">
+          <ul>
+            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+</div>-->
+
+       <!--
         <div class="row">
 
           <div class="col-lg-4 col-md-6" v-for="p in productos">
@@ -95,37 +498,63 @@
                </ul>
               </div>
              
-              <!-- <a href="#" class="get-started-btn">Get Started</a> -->
-            </div>
+              --><!-- <a href="#" class="get-started-btn">Get Started</a> -->
+          <!--  </div>
           </div>
 
         </div>
+      </div>-->
+
+     <!-- <div style="margin-left: 5%;margin-right: 5%;">
+        <p>Hola mundo</p>-->
+
+          
+    
+    </div>
+  </section><!-- #pricing -->
+
+</main>
+
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            
+          </div>
+          <div class="credits">
+            Diseñado <a href="https://www.cyberrcorp.com.bo/">CYBERCORP</a>
+          </div>
+        </div>
       </div>
-
-      <div style="margin-left: 5%;margin-right: 5%;">
-        <p>Hola mundo</p>
-        
-      </div>
-
-    </section><!-- #pricing -->
-  
-
-
-  </main>
-
-
+    </div>
+    <div id="content">
+    </div>
+  </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   
   <!-- social bar -->
   <div class="socialbar">
     <ul>
-      <li><a href="https://www.facebook.com/unsxxbolivia" title="facebook" target="_blank" class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://www.instagram.com/esambolivia" title="Instagram" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="mailto:info@esam.edu.bo" title="Email" class="icon-mail"><i class="fa fa-envelope"></i></a></li>
+      <li><a href="https://www.facebook.com/cybercorpsrltarija" title="facebook" target="_blank" class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.instagram.com/cybercorpsrl" title="Instagram" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="mailto:cybercorp.tarija100719@gmail.com" title="Email" class="icon-mail"><i class="fa fa-envelope"></i></a></li>
     </ul>
   </div>
   <!-- social bar /-->
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  
+
 
   <!-- JavaScript Libraries -->
   <script src="js/jquery.min.js"></script>
@@ -137,7 +566,9 @@
   <script src="js/superfish.min.js"></script>
   <script src="js/magnific-popup.min.js"></script>
   <script src="contactform/contactform.js"></script>
+  <script src="js/particles.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/particulas.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 
@@ -210,7 +641,59 @@
     
 
 
+
   </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="css/bootstrap4/popper.js"></script>
+    <script src="css/bootstrap4/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+
+      function typeEffect(element, speed) {
+        var text = element.innerHTML;
+        element.innerHTML = "";
+  
+        var i = 0;
+        var timer = setInterval(function () {
+          if (i < text.length) {
+            element.append(text.charAt(i));
+            i++;
+          } else {
+            clearInterval(timer);
+          }
+        }, speed);
+      }
+  
+  
+      // application
+      var speed = 100;
+      var h1 = document.querySelector('h3', 'h2');
+      var p = document.querySelector('p');
+      var delay = h1.innerHTML.length * speed + speed;
+  
+      // type affect to header
+      typeEffect(h1, speed);
+  
+  
+      // type affect to body
+      setTimeout(function () {
+        p.style.display = "inline-block";
+        typeEffect(p, speed);
+      }, delay);
+  
+    </script>
+  
 
 </body>
 </html>
