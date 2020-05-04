@@ -80,7 +80,7 @@ h6 {
   color: #fff;
   padding: 2px 20px 8px 20px;
   font-size: 16px;
-  border-radius: 4px 4px 0 0;
+  /*border-radius: 4px 4px 0 0;*/
   right: 15px;
   bottom: 0;
   transition: none;
@@ -207,7 +207,7 @@ h6 {
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
-  border-radius: 50px;
+ /* border-radius: 50px;*/
   transition: 0.5s;
   margin: 10px;
   border: 2px solid #fff;
@@ -723,7 +723,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 30px;
-  border-radius: 25px;
+ /* border-radius: 25px;*/
   transition: background 0.5s;
   margin: 10px;
   border: 2px solid #fff;
@@ -891,7 +891,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #515e61;
   display: inline-block;
   padding: 6px 30px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   color: #fff;
   transition: none;
   font-size: 14px;
@@ -1103,7 +1103,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
-  border-radius: 50%;
+ /* border-radius: 50%;*/
   text-align: center;
   width: 36px;
   height: 36px;
@@ -1177,7 +1177,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .form button[type="submit"] {
   background: linear-gradient(45deg, #d60003, #1dc8cd);
   border: 0;
-  border-radius: 20px;
+ /* border-radius: 20px;*/
   padding: 8px 30px;
   color: #fff;
 }
@@ -1440,7 +1440,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #fff;
     line-height: 1.4;
     font-family: "fuente1";
-    border-radius: 25px;
+    /*border-radius: 25px;*/
     overflow: hidden;
     z-index: 0;
 
@@ -1448,8 +1448,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .descriptionp{
   margin-top: 20px;
   line-height: 24px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 36px;
+  margin-right: 36px;
   color: #777;
   margin-bottom:5 px;
 
