@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		programas_menu:[],
 	    		programas_sede:[],
 	    		areas:[],
-	    		categorias:[{nombre:''}],
+				categorias:[],
+				productos:[],
 	    		c: 1,
 	    		idarea:1,
 	    		nuevos:true,
@@ -43,6 +44,29 @@ document.addEventListener('DOMContentLoaded', function() {
 				getcategorias: function(){
 					axios.post(SERVER,{
 						query: `query{categorias{id,nombre}}`
+					}).then((res)=>{
+						lista = res.data.data.categorias;
+						this.categorias = lista
+					}).catch((error)=>{
+						console.error(error);
+					})
+
+				},
+				getproductos: function(){
+					axios.post(SERVER,{
+						query: `query{
+							categoriaById(id:1){
+							  subcategorias{
+								id
+								nombre
+								articuloss{
+								  id
+								  nombre
+								  imagenUrl
+								}
+							  }
+							}
+						  }`
 					}).then((res)=>{
 						lista = res.data.data.categorias;
 						this.categorias = lista
@@ -184,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		}
 	    	},
 	    	mounted(){
-	    		ready();
+	    		
 	    		this.getsedes();
 	    		this.getultimosprogramas();
 	    		this.getareas();
