@@ -11,8 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		programas_sede:[],
 	    		areas:[],
 				categorias:[],
-				productos:[],
-	    		c: 1,
+				categoriaseleccionada:{},
+				categoriasById:{},
+				subcategorias:[],
+				nombrecategoria:'',
+				c: 1,
+				estilo1:'position: absolute; left: 0px; top: 0px;',
+				estilo2:'position: absolute; left: 177px; top: 0px;',
+				estilo3:'style="position: absolute; left: 355px; top: 0px;',
+				estilo4:'style="position: absolute; left: 532px; top: 0px;',
+				estilo5:'style="position: absolute; left: 710px; top: 0px;',
 	    		idarea:1,
 	    		nuevos:true,
 	    		galeria:[{foto:'e1.jpg',descripcion:'Diplomado en emergencias médicas'},
@@ -43,33 +51,50 @@ document.addEventListener('DOMContentLoaded', function() {
 				},
 				getcategorias: function(){
 					axios.post(SERVER,{
-						query: `query{categorias{id,nombre}}`
+						query: `query{
+							categorias{
+							  id
+							  nombre
+							  subcategorias{
+								nombre
+							  }							 						
+							}
+						  }`
 					}).then((res)=>{
 						lista = res.data.data.categorias;
-						this.categorias = lista
+						
+						this.categorias = lista;
+	    			
 					}).catch((error)=>{
 						console.error(error);
 					})
 
 				},
-				getproductos: function(){
+				/**/
+				getsubcategorias: function(id){
+					console.log("edithqqq",id)
+					var sql= `query{
+						categoriaById(id:`+id+`){
+						  id
+						  nombre
+						  subcategorias{
+							id 
+							nombre
+							articuloss {id nombre imagenUrl}
+						  }
+						  
+						}
+						
+					  }`;
+					  console.log("ee",sql)
 					axios.post(SERVER,{
-						query: `query{
-							categoriaById(id:1){
-							  subcategorias{
-								id
-								nombre
-								articuloss{
-								  id
-								  nombre
-								  imagenUrl
-								}
-							  }
-							}
-						  }`
+						query: sql
 					}).then((res)=>{
-						lista = res.data.data.categorias;
-						this.categorias = lista
+						lista = res.data.data.categoriaById;
+						console.log("hola edith",lista);
+						this.categoriaseleccionada=lista;
+						this.categoriasById = lista;
+	    			
 					}).catch((error)=>{
 						console.error(error);
 					})
@@ -105,6 +130,28 @@ document.addEventListener('DOMContentLoaded', function() {
 	    			}).finally(()=> {
 	    				//global.commit('cargar',false);
 	    				this.activo=true;
+	    			});
+				},
+				getproductosmenu:function(){
+	    			axios.post(SERVER, {
+	    				query:`query{
+							categoriaById(id:1){
+							  subcategorias{
+								id
+								nombre
+								articuloss{
+								  id
+								  nombre
+								  imagenUrl
+								}
+							  }
+							}
+						  }`
+	    			}).then((res)=> {
+	    				datos=res.data.data.productos;
+	    				this.programas_menu=datos;
+	    			}).catch((error)=>{
+	    				//n_error(error);
 	    			});
 	    		},
 	    		getareas: function(){
@@ -201,8 +248,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		repararImg:function(event){
 	    			event.target.src ='webdata/portadas/postgrado_default.png';
 	    		},
-	    		splitsede:function(name){
-	    			array=name.split(' ');
+	    		splitnombre:function(name){
+	    			array=name.splitnombre(' ');
 	    			array.shift();
 	    			return array.join(' ');
 	    		}
@@ -212,7 +259,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		this.getsedes();
 	    		this.getultimosprogramas();
 	    		this.getareas();
-	    		this.getcategorias();
+				this.getcategorias();
+				/*this.getsubcategorias();*/
 	    		/*$('.gallery a').simpleLightbox({});*/
 	    	}
 	    });

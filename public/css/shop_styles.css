@@ -45,8 +45,8 @@
 }
 body
 {
-	font-family: 'Rubik', sans-serif;
-	font-size: 14px;
+	font-family: 'fuente1' !important;
+	font-size: 18px;
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #000000;
@@ -537,6 +537,7 @@ section
 }
 .logo
 {
+	
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
@@ -544,11 +545,10 @@ section
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.logo a
+.logo a img
 {
-	font-size: 36px;
-	font-weight: 500;
-	color: #0e8ce4;
+	height: 67px !important;
+	width: 100px !important;
 }
 .header_search
 {
@@ -806,7 +806,7 @@ select option
 	right: -14px;
 	width: 23px;
 	height: 23px;
-	background: #0e8ce4;
+	background: #0e88ab;
 	border-radius: 50%;
 	text-align: center;
 }
@@ -843,7 +843,7 @@ select option
 }
 .cart_text a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .cart_price
 {
@@ -883,7 +883,7 @@ select option
 {
 	width: 293px;
 	height: 100%;
-	background: #0e8ce4;
+	background: #0e88ab;
 	padding-left: 35px;
 	cursor: pointer;
 	z-index: 1;
@@ -979,7 +979,7 @@ select option
 }
 .cat_menu li a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .cat_menu li a i
 {
@@ -1075,7 +1075,7 @@ select option
 .page_menu_content
 {
 	height: 0px;
-	background: #0e8ce4;
+	background: #0e88ab;
 	padding-left: 15px;
 	padding-right: 15px;
 	overflow: hidden;
@@ -1479,7 +1479,7 @@ select option
 }
 .product_name div a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .product_fav
 {
@@ -1558,7 +1558,7 @@ select option
 .product_new
 {
 	display: none;
-	background: #0e8ce4;
+	background: #0e88ab;
 	visibility: hidden;
 	opacity: 0;
 }
@@ -1646,7 +1646,7 @@ select option
 }
 .page_nav li:hover a
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .page_nav li:last-child
 {
@@ -1690,7 +1690,7 @@ select option
 }
 .sidebar_categories li a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .filter_by_section
 {
@@ -1771,7 +1771,7 @@ select option
 }
 .brand a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 
 /*********************************
@@ -1896,7 +1896,7 @@ select option
 }
 .viewed_name a:hover
 {
-	color: #0e8ce4;
+	color: #0e88ab;
 }
 .item_marks
 {
@@ -2102,7 +2102,7 @@ select option
 	right: 0;
 	width: 153px;
 	height: 50px;
-	background: #0e8ce4;
+	background: #0e88ab;
 	color: #FFFFFF;
 	line-height: 50px;
 	font-size: 18px;
@@ -2125,7 +2125,7 @@ select option
 .newsletter_unsubscribe_link a
 {
 	font-size: 10px;
-	color: #0e8ce4;
+	color: #0e88ab;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2133,7 +2133,7 @@ select option
 }
 .newsletter_unsubscribe_link a:hover
 {
-	color: #0d82d3;
+	color: #0e88ab;
 }
 
 /*********************************
@@ -2151,7 +2151,7 @@ select option
 	margin-bottom: 18px;
 	margin-top: -10px;
 }
-.footer .logo
+/*.footer .logo
 {
 	top: auto;
 	-webkit-transform: transform: none;
@@ -2159,7 +2159,7 @@ select option
     -ms-transform: transform: none;
     -o-transform: transform: none;
     transform: none;
-}
+}*/
 .footer .logo a
 {
 	color: #000000;
@@ -2284,3 +2284,10 @@ select option
 {
 	margin-right: 0px;
 }
+
+@font-face {
+	font-family: 'fuente1';
+	src: url('../fonts/Gidole-Regular.otf') format('truetype');
+	font-weight: bold;
+	font-size: 50px !important;
+	}
