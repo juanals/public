@@ -1365,12 +1365,12 @@ select option
 
 .product_grid
 {
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	-ms-transform: translateX(-20px);
-	-o-transform: translateX(-20px);
-	transform: translateX(-20px);
-	width: calc(100% + 40px);
+	-webkit-transform: translateX(-20px) !important;
+	-moz-transform: translateX(-20px)!important;
+	-ms-transform: translateX(-20px)!important;
+	-o-transform: translateX(-20px)!important;
+	transform: translateX(-20px)!important;
+	width: calc(100% + 40px)!important;
 }
 .product_grid_border
 {
@@ -1385,10 +1385,7 @@ select option
 }
 .product_item
 {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

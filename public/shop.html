@@ -192,9 +192,9 @@
 
 									<div class="main_nav_menu ml-auto">
 										<ul class="standard_dropdown main_nav_dropdown">
-											<li><a href="#">INCIO<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="index.hmtl">INCIO<i class="fas fa-chevron-down"></i></a></li>
 
-											<li><a href="CONTACTANOS.html">CONTÁCTANOS<i
+											<li><a href="#">CONTÁCTANOS<i
 														class="fas fa-chevron-down"></i></a></li>
 										</ul>
 									</div>
@@ -234,7 +234,7 @@
 										</form>
 									</div>
 									<ul class="page_menu_nav">
-										<li class="page_menu_item has-children">
+										<!--<li class="page_menu_item has-children">
 											<a href="#">Language<i class="fa fa-angle-down"></i></a>
 											<ul class="page_menu_selection">
 												<li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
@@ -253,53 +253,13 @@
 												<li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a>
 												</li>
 											</ul>
-										</li>
+										</li>-->
 										<li class="page_menu_item">
-											<a href="#">Home<i class="fa fa-angle-down"></i></a>
+											<a href="index.html">Incio<i class="fa fa-angle-down"></i></a>
 										</li>
-										<li class="page_menu_item has-children">
-											<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
-											<ul class="page_menu_selection">
-												<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-												<li class="page_menu_item has-children">
-													<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-													<ul class="page_menu_selection">
-														<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-														</li>
-														<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-														</li>
-														<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-														</li>
-														<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-														</li>
-													</ul>
-												</li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-											</ul>
-										</li>
-										<li class="page_menu_item has-children">
-											<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-											<ul class="page_menu_selection">
-												<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-											</ul>
-										</li>
-										<li class="page_menu_item has-children">
-											<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
-											<ul class="page_menu_selection">
-												<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-											</ul>
-										</li>
-										<li class="page_menu_item"><a href="blog.html">blog<i
-													class="fa fa-angle-down"></i></a></li>
-										<li class="page_menu_item"><a href="contact.html">contact<i
+										
+										
+										<li class="page_menu_item"><a href="contact.html">Contáctanos<i
 													class="fa fa-angle-down"></i></a></li>
 									</ul>
 
@@ -345,7 +305,7 @@
 							<!-- Shop Sidebar -->
 							<div class="shop_sidebar">
 								<div class="sidebar_section">
-									<div class="sidebar_title">Categories</div>
+									<div class="sidebar_title">Categorias</div>
 									<ul class="sidebar_categories" v-for="(c, shop) in categorias">
 										<li><a href="#" v-model="nombrecategoria" @click="getsubcategorias(c.id)">{{c.nombre}}</a></li>
 
@@ -362,7 +322,7 @@
 												style="border:0; font-weight:bold;"></p>
 									</div>
 								</div>
-								<div class="sidebar_section">
+							<!--	<div class="sidebar_section">
 									<div class="sidebar_subtitle color_subtitle">Color</div>
 									<ul class="colors_list">
 										<li class="color"><a href="#" style="background: #b19c83;"></a></li>
@@ -386,7 +346,7 @@
 										<li class="brand"><a href="#">Sony</a></li>
 										<li class="brand"><a href="#">Xiaomi</a></li>
 									</ul>
-								</div>
+								</div>-->
 							</div>
 
 						</div>
@@ -397,12 +357,12 @@
 
 							<div class="shop_content">
 								<div class="shop_bar clearfix">
-									<div class="shop_product_count"><span>186</span> products found</div>
+									<div class="shop_product_count"><span>...</span> Productos Encontrados</div>
 									<div class="shop_sorting">
-										<span>Sort by:</span>
+										<span>Ordenar por:</span>
 										<ul>
 											<li>
-												<span class="sorting_text">highest rated<i
+												<span class="sorting_text">Nombre<i
 														class="fas fa-chevron-down"></span></i>
 												<ul>
 													<li class="shop_sorting_button"
@@ -410,7 +370,7 @@
 														rated
 													</li>
 													<li class="shop_sorting_button"
-														data-isotope-option='{ "sortBy": "name" }'>name</li>
+														data-isotope-option='{ "sortBy": "name" }'>Nombre</li>
 													<li class="shop_sorting_button"
 														data-isotope-option='{ "sortBy": "price" }'>price</li>
 												</ul>
@@ -423,135 +383,48 @@
 									<div class="product_grid" >
 										<div class="product_grid_border"></div>
 	
-										<!-- Product Item -->
-									<div class="product_item is_new" >
-											<div class="product_border"></div>
-											<div
-												class="product_image d-flex flex-column align-items-center justify-content-center">
-												<img src="images/new_5.jpg" alt=""></div>
-											<div class="product_content">
-												<div class="product_price">$225</div>
-												<div class="product_name">
-													<div><a href="#" tabindex="0">Philips BT6900A</a></div>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount">-25%</li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-	
 										
-										<!-- Product Item -->
-										<div class="product_item">
-											<div class="product_border"></div>
-											<div
-												class="product_image d-flex flex-column align-items-center justify-content-center">
-												<img src="images/featured_8.png" alt=""></div>
-											<div class="product_content">
-												<div class="product_price">$379</div>
-												<div class="product_name">
-													<div><a href="#" tabindex="0">Digitus EDNET...</a></div>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount">-25%</li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-										<!-- Product Item -->
-									<div class="product_item is_new" >
-										<div class="product_border"></div>
-										<div
-											class="product_image d-flex flex-column align-items-center justify-content-center">
-											<img src="images/new_5.jpg" alt=""></div>
-										<div class="product_content">
-											<div class="product_price">$225</div>
-											<div class="product_name">
-												<div><a href="#" tabindex="0">Philips BT6900A</a></div>
-											</div>
-										</div>
-										<div class="product_fav"><i class="fas fa-heart"></i></div>
-										<ul class="product_marks">
-											<li class="product_mark product_discount">-25%</li>
-											<li class="product_mark product_new">new</li>
-										</ul>
-									</div>
 									<!-- Product Item -->
-									<div class="product_item is_new" >
-										<div class="product_border"></div>
+								
+								<!--	<div class="product_item is_new" v-for="s in categoriaseleccionada.subcategorias" >
+										
 										<div
 											class="product_image d-flex flex-column align-items-center justify-content-center">
+											
 											<img src="images/new_5.jpg" alt=""></div>
+											
 										<div class="product_content">
+											<template v-for="p,i in s.articuloss">
 											<div class="product_price">$225</div>
 											<div class="product_name">
-												<div><a href="#" tabindex="0">Philips BT6900A</a></div>
+												<div><a href="#" tabindex="0">{{p.nombre}}</a></div>
 											</div>
+										</template>
 										</div>
 										<div class="product_fav"><i class="fas fa-heart"></i></div>
 										<ul class="product_marks">
 											<li class="product_mark product_discount">-25%</li>
 											<li class="product_mark product_new">new</li>
 										</ul>
-									</div>
-
-									<!-- Product Item -->
-									<div class="product_item is_new" >
-										<div class="product_border"></div>
-										<div
-											class="product_image d-flex flex-column align-items-center justify-content-center">
-											<img src="images/new_5.jpg" alt=""></div>
-										<div class="product_content">
-											<div class="product_price">$225</div>
-											<div class="product_name">
-												<div><a href="#" tabindex="0">Philips BT6900A</a></div>
-											</div>
-										</div>
-										<div class="product_fav"><i class="fas fa-heart"></i></div>
-										<ul class="product_marks">
-											<li class="product_mark product_discount">-25%</li>
-											<li class="product_mark product_new">new</li>
-										</ul>
-									</div>
-									<!-- Product Item -->
-									<div class="product_item is_new" >
-										<div class="product_border"></div>
-										<div
-											class="product_image d-flex flex-column align-items-center justify-content-center">
-											<img src="images/new_5.jpg" alt=""></div>
-										<div class="product_content">
-											<div class="product_price">$225</div>
-											<div class="product_name">
-												<div><a href="#" tabindex="0">Philips BT6900A</a></div>
-											</div>
-										</div>
-										<div class="product_fav"><i class="fas fa-heart"></i></div>
-										<ul class="product_marks">
-											<li class="product_mark product_discount">-25%</li>
-											<li class="product_mark product_new">new</li>
-										</ul>
-									</div>
-
-
+									</template>
+									</div>-->
+									
+								
 
 	
 	
 	
 									</div>
 								</div>
-							
 								<div class="row" v-for="s in categoriaseleccionada.subcategorias">
 									<div class="col-sm-3" v-for="p,i in s.articuloss" style="height: 250px;">
-										
+										<div class="shop_product_count"> {{s.nombre}}</div>
 											<div class="product_border"></div>
 											<div
 												class="product_image d-flex flex-column align-items-center justify-content-center">
 												<img :src="p.imagenUrl" alt=""></div>
 											<div class="product_content">
-												<div class="product_price">$225</div>
+												<div class="product_price">CODIGO</div>
 												<div class="product_name">
 													<div><a href="#" tabindex="0">{{p.nombre}}</a></div>
 												</div>
@@ -565,6 +438,9 @@
 	
 									</div>
 								</div>
+
+							
+
 
 								<!-- Shop Page Navigation -->
 

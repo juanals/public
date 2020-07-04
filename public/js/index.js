@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				categorias:[],
 				categoriaseleccionada:{},
 				categoriasById:{},
+				productoById:{},
+				productoseleccionado:{},
 				subcategorias:[],
 				nombrecategoria:'',
 				c: 1,
@@ -93,11 +95,18 @@ document.addEventListener('DOMContentLoaded', function() {
 						lista = res.data.data.categoriaById;
 						console.log("hola edith",lista);
 						this.categoriaseleccionada=lista;
+						this.productoseleccionado=lista;
 						this.categoriasById = lista;
+
+						
 	    			
 					}).catch((error)=>{
 						console.error(error);
 					})
+
+				},
+				getproductos: function(id){
+					window.localStorage.setItem('idproducto',id );
 
 				},
 	    		getultimosprogramas: function(){
@@ -256,10 +265,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	    	},
 	    	mounted(){
 	    		
-	    		this.getsedes();
-	    		this.getultimosprogramas();
-	    		this.getareas();
+	    	
 				this.getcategorias();
+				this.productoseleccionado=JSON.parse(localStorage.getItem('productoseleccionado')),
+				console.log("erer",this.productoseleccionado)
 				/*this.getsubcategorias();*/
 	    		/*$('.gallery a').simpleLightbox({});*/
 	    	}
