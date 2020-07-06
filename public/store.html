@@ -94,13 +94,13 @@
 								<div>
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
-										<span>Your Wishlist</span>
+										<span>Favoritos</span>
 										<div class="qty">2</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
 
-								<!-- Cart -->
+								<!-- Cart 
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
@@ -140,7 +140,7 @@
 											<a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
-								</div>
+								</div>-->
 								<!-- /Cart -->
 
 								<!-- Menu Toogle -->
@@ -171,13 +171,9 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Laptops</a></li>
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
+						<li v-for="t in categorias"><a href="#" @click="getsubcategorias(t.id)">{{t.nombre}}</a></li>
+						<li ><a href="index.html">Inicio</a></li>
+						
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -195,6 +191,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
+							<li><a href="#">Categorias</a></li>
 							<li><a href="#">{{categoriaseleccionada.nombre}}</a></li>
 
 						</ul>
@@ -215,7 +212,7 @@
 					<!-- ASIDE -->
 					<div id="aside" class="col-md-3">
 						<!-- aside Widget -->
-						<h3 class="aside-title">Categories</h3>
+						<h3 class="aside-title">CATEGORIAS</h3>
 						<div class="aside" v-for="(c, shop) in categorias">
 
 							<div class="checkbox-filter">
@@ -375,7 +372,7 @@
 
 											<div class="product-btns">
 												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-														class="tooltipp">add to wishlist</span></button>
+														class="tooltipp">Añadir a favoritos</span></button>
 												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
 														class="tooltipp">add to compare</span></button>
 												<button class="quick-view"><i class="fa fa-eye"></i><span
@@ -383,8 +380,7 @@
 											</div>
 										</div>
 										<div class="add-to-cart">
-											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to
-												cart</button>
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir a cotización</button>
 										</div>
 									</div>
 								
