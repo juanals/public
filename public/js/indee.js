@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             idproducto: -1,
             productoseleccionado:{},
+            categorias:[],
         },
         methods: {
 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log("hola edith", lista);
                     this.productoseleccionado = lista;
                     window.localStorage.setItem('productoseleccionado', JSON.stringify(lista));
+                   
                     
 
 
@@ -38,13 +40,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         },
+        getcategorias: function(){
+            axios.post(SERVER,{
+                query: `query{
+                    categorias{
+                      id
+                      nombre
+                      subcategorias{
+                        nombre
+                      }							 						
+                    }
+                  }`
+            }).then((res)=>{
+                lista = res.data.data.categorias;
+                
+                this.categorias = lista;
+            
+            }).catch((error)=>{
+                console.error(error);
+            })
+
+        },
         mounted() {
 
-
+            
             
             this.idproducto = localStorage.getItem('idproducto');
                 console.log("erer", this.idproducto);
                 this.getproductos(this.idproducto);
+                this.getcategorias();
             /*this.getsubcategorias();*/
             /*$('.gallery a').simpleLightbox({});*/
         }

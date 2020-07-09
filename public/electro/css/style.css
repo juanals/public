@@ -183,7 +183,7 @@ textarea.input {
 /*-- Select input --*/
 
 .input-select {
-  padding: 0px 15px;
+  
   background: #FFF;
   border: 1px solid #E4E7ED;
   height: 40px;
@@ -458,6 +458,10 @@ textarea.input {
   display: block;
   height: 70px !important;
   width: 120px !important;
+}
+.logo1 img{
+  margin-top: 50px;
+  width: 250px !important;
 }
 
 /*----------------------------*\
