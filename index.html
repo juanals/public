@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CYBERCORP</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="tecnología,seguridad,cámaras,hardware,software">
+  <meta content="" name="hardware y software">
+  <meta name="theme-color" content="#00324C">
+
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- CSS File -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/ionicons.min.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- CSS File gallery -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/gallery-grid.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+  <!-- CSS File headline -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="css/headline.css">
+  <!-- CSS File set2 -->
+
+  <link rel="stylesheet" type="text/css" href="css/set2.css" />
+
+  
+
+  <style>
+    #particles-js,
+    #particles-js2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .fb-page,
+    iframe {
+      height: 650px !important;
+    }
+
+    .map_dir {
+      height: 480px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <!-- Load Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v5.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="123720405685500" theme_color="#075685"
+    logged_in_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?"
+    logged_out_greeting="Hola!! un gusto saludarle, ¿en que le podemos ayudar?">
+  </div>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto fuente">CYBERCORP</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro" class="fuente">INICIO</a></li>
+          <li><a href="#about" class="fuente">ACERCA DE NOSOTROS</a></li>
+          <li><a href="#more-features" class="fuente">SERVICIOS</a></li>
+          <li><a href="#pricing" class="fuente">PRODUCTOS</a></li>
+          <li><a href="#cursos" class="fuente">CURSOS</a></li>
+          <li><a href="#contact" class="fuente">CONTÁCTANOS</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div id="particles-js"></div>
+
+    <div class="intro-text">
+      <h2 class="fuente">BIENVENIDO</h2>
+
+      <!--<a href="#more-features" class="btn-get-started scrollto fuente">Servicios</a>-->
+    </div>
+
+    <div class="product-screens">
+
+      <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
+        <img src="img/logops.png" alt="logo" width="350" height="25%"> <br>
+        <br>
+        </hr>
+        <p class="fuenteslogan">Sistemas, Seguridad y Tecnología Avanzada</p>
+        </hr>
+      </div>
+
+
+
+    </div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="section-bg">
+      <div class="container gallery-container1">
+        <div class="section-header">
+          <h3 class="section-title">ACERCA DE NOSOTROS</h3>
+          <span class="section-divider"></span>
+        </div>
+        <div id="app" class="wrapper" v-cloak
+          v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
+          <div class="slide-wrapper" v-for="(slide, index) in slides" v-bind:class="{ active: index === currentSlide }"
+            v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
+            <div class="slide-inner">
+              <div class="slide-bg-text">
+                <h2>{{ slide.headlineFirstLine }}</h2>
+                <p>{{ slide.headlineSecondLine }}</p>
+              </div>
+              <!--<div class="slide-rect-filter">
+                    <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
+                </div>-->
+              <div class="slide-content">
+                <h1 class="slide-content-text">
+                  <h2>{{ slide.headlineFirstLine }}</h2>
+                  <div v-if="slide.headlineFirstLine=='VALORES'">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <ul>
+                          <li><i class="ion-android-checkmark-circle"></i> Dedicación al cliente</li>
+                          <li><i class="ion-android-checkmark-circle"></i> Innovación </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Calidad </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Respeto </li>
+        
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul>
+                          <li><i class="ion-android-checkmark-circle"></i> Colaboración </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Cooperación </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Liderazgo</li>
+                          <li><i class="ion-android-checkmark-circle"></i> Responsabilidad </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-4">
+                        <ul>
+                          <li><i class="ion-android-checkmark-circle"></i> Excelencia </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Ética </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Creatividad </li>
+                          <li><i class="ion-android-checkmark-circle"></i> Identidad </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                  <p v-else>{{ slide.headlineSecondLine }}</p>
+                  <!--<p v-if="slide.headlineFirstLine =='VALORES'">
+                </p>-->
+                </h1>
+              </div>
+              <!--<h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2>-->
+            </div>
+          </div>
+          <div class="controls-container">
+            <button class="controls-button" v-for="(slide, index) in slides"
+              v-bind:class="{ active: index === currentSlide }"
+              v-on:click="updateSlide(index)">{{ slide.headlineFirstLine }} </button>
+          </div>
+          <div class="pagination-container">
+            <span class="pagination-item" v-for="(slide, index) in slides"
+              v-bind:class="{ active: index === currentSlide }" v-on:click="updateSlide(index)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section id="about" class="section-bg">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+        <div class="section-header">
+          <h3 class="section-title">ACERCA DE NOSOTROS</h3>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-lg-6 about-img wow fadeInLeft">
+            <p>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de calidad y
+              eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados para cumplir con los
+              requerimientos y la responsabilidad para con nuestros clientes.</p>
+            <br><br><img src="img/about-img.jpg" alt="IMG" style="height: 100%;">
+          </div>
+
+          <div class="col-lg-6 content wow fadeInRight">
+            <h2>Misión</h2>
+            <p>
+              Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad,
+              disponibilidad y soporte a futuro en todos nuestros servicios.
+            </p>
+            <h2>Visión</h2>
+            <p>
+              Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones
+              a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.
+            </p>
+            <h2>Valores</h2>
+            <div class="row">
+              <div class="col-sm-4">
+                <ul>
+                  <li><i class="ion-android-checkmark-circle"></i> Dedicación al cliente</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Innovación </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Calidad </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Respeto </li>
+
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul>
+                  <li><i class="ion-android-checkmark-circle"></i> Colaboración </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Cooperación </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Liderazgo</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Responsabilidad </li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul>
+                  <li><i class="ion-android-checkmark-circle"></i> Excelencia </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Ética </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Creatividad </li>
+                  <li><i class="ion-android-checkmark-circle"></i> Identidad </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+    </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      More Features Section
+    ============================-->
+    <section id="more-features" class="section-bg">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+
+        <div class="section-header">
+          <h3 class="section-title">NUESTROS SERVICIOS</h3>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" style="min-height: 235px;">
+
+              <div class="icon"><i class="ion-ios-videocam"></i></div>
+              <h4 class="title">SISTEMAS DE SEGURIDAD TOTAL</h4>
+              <p class="description">CCTV - Cámaras/DVR/Accesorios</p>
+              <p class="description">Alarmas y domótica</p>
+              <p class="description">Control de acceso</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" style="min-height: 235px;">
+              <div class="icon"><i class="ion-settings"></i></div>
+              <h4 class="title">SOPERTE TÉCNICO Y MANTENIMIENTO</h4>
+              <p class="description">Mantenimiento de Software y Hardware</p>
+              <p class="description">Recuperación de datos</p>
+              <p class="description">Reparación de equipos y accesorios</p>
+              <p class="description">Soporte de sistemas</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" style="min-height: 235px;">
+              <div class="icon"><i class="ion-ios-filing"></i></div>
+              <h4 class="title">SOFTWARE</h4>
+              <p class="description">Licencias eletrónicas</p>
+              <p class="description">Sistemas operativos</p>
+              <p class="description">Programas y aplicaciones para PC</p>
+              <p class="description">Antivirus y seguridad</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" style="min-height: 235px;">
+              <div class="icon"><i class="ion-monitor"></i></div>
+              <h4 class="title">HARDWARE</h4>
+              <p class="description">Computadoras</p>
+              <p class="description">Accesorios</p>
+              <p class="description">Almacenamiento</p>
+              <p class="description">Conectividad</p>
+              <p class="description">Componentes</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #more-features -->
+
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <div id="particles-js2"></div>
+    <section id="pricing" class="section-bg">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+
+        <div class="section-header text-center">
+          <h3 class="section-title">PRODUCTOS OFERTADOS</h3>
+          <span class="section-divider"></span>
+
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6" v-for="p in productos">
+            <div class="box wow fadeInLeft" style="min-height: 60vh">
+              <div class="contenedor"
+                style="position: relative;display: inline-block;text-align: center;width: 100%;padding: 12px;">
+                <img :src="`img/${p.img}`" alt="" style="width: 100%;height: 100%;border: 1px solid grey;">
+                <p style="margin: 0;"> <b>{{p.desc}}</b> </p>
+              </div>
+
+              <div style="padding: 10px;">
+                <ul>
+                  <li v-for="d in p.detalles"><i class="ion-android-checkmark-circle"></i> {{d}} </li>
+                </ul>
+              </div>
+              <a href="catalogo.html" class="get-started-btn">VER CATÁLOGO<span class="ion-ios-arrow-round-forward"></span></a>
+            </div>
+            <!-- <a href="#" class="get-started-btn">Get Started</a> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #pricing -->
+
+    <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+          <div class="row">
+            <div class="section-header text-center">
+              <h3 class="section-title">¿PORQUE ELEGIRNOS?</h3>
+              <span class="section-divider"></span>
+              <div class="col-12">
+                
+                
+                  <img class="advanced-feature-img-right wow fadeInRight" src="img/apunt.png" alt="">
+                  <div class="blog-card">
+
+                    <div class="descriptionp" >
+
+                      <i class="ion-android-checkmark-circle"></i><p>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto
+                        grado de
+                        calidad y eficacia de los mismos. Nos preocupamos por estar siempre a la vanguardia, preparados
+                        para
+                        cumplir con los requerimientos y la responsabilidad para con nuestros clientes.</p>
+
+                    </div>
+                  </div>
+                  <div class="blog-card">
+                    <div class="descriptionp">
+                      <i class="ion-android-checkmark-circle"></i><p>Satisfacemos las necesidades de nuestros clientes con calidad responsabilidad,
+                        competitividad, disponibilidad y soporte a futuro en todos nuestros servicios.</p>
+
+                    </div>
+                  </div>
+                    <div class="blog-card">
+                      <div class="descriptionp">
+                        <i class="ion-android-checkmark-circle"></i><p>Somos una entidad reconocida por la calidad de sus productos y servicios, a través de
+                          una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en
+                          el país.</p>
+
+                      </div>
+                    </div>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </section><!-- #advanced-features -->
+
+    <!--==========================
+      Cursos Section
+    ============================-->
+    <div id="particles-js"></div>
+    <section id="cursos" class="section-bg">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+
+        <div class="section-header text-center">
+          <h3 class="section-title">CYBERCORP ACADEMY</h3>
+          <span class="section-divider"></span>
+
+
+        </div>
+
+        <div class="grid1">
+          <figure class="effect-kira">
+            <img src="img/cursomant.jpg" alt="img16" />
+            <figcaption>
+              <h2>Más Información...</h2>
+              <p>
+                <a href="cursos/CURSO MANTENIMIENTO DE COMPUTADORAS.pdf" target="_blank"><i class="fa fa-fw fa-download"></i></a>
+                <a href="#"><i class="fa fa-fw fa-share"></i></a>
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-kira">
+            <img src="img/cursorob.jpeg" alt="img26" />
+            <figcaption>
+              <h2>Más Información...</h2>
+              <p>
+                <a href="cursos/CURSO DE ROBÓTICA.pdf" target="_blank"><i class="fa fa-fw fa-download"></i></a>
+                <a href="#"><i class="fa fa-fw fa-share"></i></a>
+
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="effect-kira">
+            <img src="img/cursocam.jpeg" alt="img26" />
+            <figcaption>
+              <h2>Más Información...</h2>
+              <p>
+                <a href="cursos/CURSO CAMARAS IP Y ANALOGICAS.pdf" target="_blank"><i class="fa fa-fw fa-download"></i></a>
+                <a href="#"><i class="fa fa-fw fa-share"></i></a>
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+
+
+
+
+      </div>
+    </section><!-- #pricing -->
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery">
+
+      <div class="section-header">
+        <h3 class="section-title">EXPERIENCIAS CYBERCORP S.R.L.</h3>
+        <span class="section-divider" style="margin-bottom: 0;"></span>
+      </div>
+      <div class="container gallery-container">
+
+        <div class="tz-gallery">
+
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac1.jpg">
+                <img src="img/gallery/imac1.jpg" alt="">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac2.jpg">
+                <img src="img/gallery/imac2.jpg" alt="Bridge">
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <a class="lightbox" href="img/gallery/imac3.jpg">
+                <img src="img/gallery/imac3.jpg" alt="Tunnel">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac4.jpg">
+                <img src="img/gallery/imac4.jpg" alt="Coast">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac5.jpg">
+                <img src="img/gallery/imac5.jpg" alt="Rails">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac6.jpg">
+                <img src="img/gallery/imac6.jpg" alt="Traffic">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac7.jpg">
+                <img src="img/gallery/imac7.jpg" alt="Rocks">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac8.jpg">
+                <img src="img/gallery/imac8.jpg" alt="Benches">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac9.jpg">
+                <img src="img/gallery/imac9.jpg" alt="Benches">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac10.jpg">
+                <img src="img/gallery/imac10.jpg" alt="Benches">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac11.jpg">
+                <img src="img/gallery/imac11.jpg" alt="Benches">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="lightbox" href="img/gallery/imac12.jpg">
+                <img src="img/gallery/imac12.jpg" alt="Benches">
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6" v-for="g in galeria">
+            <div class="gallery-item wow fadeInUp" style="height: 100%;">
+              <a :href="`img/gallery/${g.img}`" class="gallery-popup">
+                <img :src="`img/gallery/${g.img}`" alt=""
+                  style="width:100%; min-height: 250px;max-height: 270px;height: 100%;">
+              </a>
+            </div>
+          </div>
+        </div>-->
+
+      </div>
+    </section>
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container-fluid" style="padding-right: 5%;padding-left: 5%">
+        <div class="section-header">
+          <h3 class="section-title">VISÍTANOS</h3>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="row wow fadeInUp"> </div>
+        <div class="row wow fadeInUp">
+          <div class="col-md-6 col-xs-12">
+            <ul class="nav nav-pills">
+              <li class="nav-item" v-for="s in sedes"><a :class="`nav-link ${s.class}`" data-toggle="tab" href="#tab1"
+                  @Click="sel(s.id)"> {{s.nombre}} </a></li>
+            </ul>
+            <div class="info" style="margin-top: 12px;">
+
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p style="margin-bottom: 0;"> {{sede.direccion}} </p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p style="margin-bottom: 0;"> {{sede.correo}} </p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p style="margin-bottom: 12px;"> <a href="https://wa.me/34612345678" target="_blank"
+                    style="color: black;" title="Abrir en WhatsApp">{{sede.tel}}</a> </p>
+              </div>
+              <div>
+                <iframe class="map_dir" v-if="sede.id==1"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855.6655023343048!2d-64.73196549050392!3d-21.533908827194963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x940647e27fe7d807%3A0x18b96c5d8f69cd6a!2sCYBERCORP%20TARIJA!5e0!3m2!1ses-419!2sbo!4v1574451800076!5m2!1ses-419!2sbo"
+                  width="95%" height="300" frameborder="0" style="border:3px solid #E4E4E4;"
+                  allowfullscreen=""></iframe>
+                <iframe class="map_dir" v-if="sede.id==2"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16570.05291725635!2d-65.27029052257085!3d-19.047346846934563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0!2zMTnCsDAyJzQ4LjYiUyA2NcKwMTUnMjguOCJX!5e0!3m2!1ses-419!2sbo!4v1588104944179!5m2!1ses-419!2sbo"
+                  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                  tabindex="0"></iframe>
+                <iframe class="map_dir" v-if="sede.id==3"
+                  src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d234.9313667571699!2d-65.76004579968992!3d-19.588704416958485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d-19.5886671!2d-65.7601853!4m3!3m2!1d-19.5886671!2d-65.7601853!5e0!3m2!1ses-419!2sbo!4v1588102863466!5m2!1ses-419!2sbo"
+                  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                  tabindex="0"></iframe>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <div class="col-md-6 col-xs-12">
+            <div class="fb-like" data-href="https://www.facebook.com/cybercorpsrltarija/" data-width=""
+              data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"
+              style="text-align: center;width: 100%;margin-bottom: 32px;">
+
+            </div>
+
+            <div class="fb-page" data-href="https://www.facebook.com/cybercorpsrltarija/" data-tabs="timeline"
+              data-width="" data-height="600" data-small-header="false" data-adapt-container-width="true"
+              data-hide-cover="false" data-show-facepile="true" style="text-align: center;width: 100%">
+              <blockquote cite="https://www.facebook.com/cybercorpsrltarija/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/cybercorpsrltarija/">Cybercorp S.R.L</a>
+              </blockquote>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <section class="section-bg text-center" style="padding-bottom: 64px;padding-top: 8px;">
+    <div class="section-header">
+      <h3 class="section-title">NUESTRA CORPORACIÓN</h3>
+      <span class="section-divider"></span>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+        <a href="https://www.cca.edu.bo.test"  target="_blank"> <img class="img-corp" src="img/xlogo_cca4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <a href="http://www.esam.edu.bo" target="_blank">  <img class="img-corp" src="img/xlogo_esam_principal4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <a href="https://www.facebook.com/CiberKidsTarija/"target="_blank"> <img class="img-corp" src="img/xlogo_ciberkids4.png"
+            class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+      <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+        <a href="#"> <img class="img-corp" src="img/logo4.png" class="img-responsive" alt="logo" width="100">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <!--  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            
+          </div>
+          <div class="credits">
+            Designed <a href="https://www.esam.edu.bo/">ESAM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+    </div>
+  </footer> -->
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <div class="socialbar">
+    <ul>
+      <li><a href="https://www.facebook.com/cybercorpsrltarija" title="facebook" target="_blank"
+          class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/cybercorpsrl" title="Instagram" target="_blank" 
+            class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="mailto:cybercorp.tarija100719@gmail.com" title="Email" class="icon-mail"><i
+            class="fa fa-envelope"></i></a></li>
+    </ul>
+  </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/hoverIntent.js"></script>
+  <script src="js/superfish.min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
+  <!-- <script src="contactform/contactform.js"></script> -->
+  <script src="js/main.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/particulas.js"></script>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v5.0"></script>
+
+  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <scipt src="https://www.gstatic.com/firebasejs/init.js"></scipt>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+
+  <script>
+    // For Demo purposes only (show hover effect on mobile devices)
+    [].slice.call(document.querySelectorAll('a[href="#"')).forEach(function (el) {
+      el.addEventListener('click', function (ev) { ev.preventDefault(); });
+    });
+  </script>
+
+  <script defer type="text/javascript">
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX00dTs3tgbuFwZwbmz7AfS3a3clAe9fY",
+      authDomain: "cyberrcorp.firebaseapp.com",
+      databaseURL: "https://cyberrcorp.firebaseio.com",
+      projectId: "cyberrcorp",
+      storageBucket: "cyberrcorp.appspot.com",
+      messagingSenderId: "1098421641378",
+      appId: "1:1098421641378:web:d00202f2fa9a641e"
+    };
+    firebase.initializeApp(firebaseConfig);
+    particulas();
+    var app = new Vue({
+      el: '#app',
+      data: {
+        currentSlide: 0,
+        isPreviousSlide: false,
+        isFirstLoad: true,
+        slides: [
+          {
+            headlineFirstLine: "MISIÓN",
+            headlineSecondLine: "Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios",
+            sublineFirstLine: "Nihil sub sole",
+            sublineSecondLine: "novum",
+            bgImg: "img/vision.jpg",
+            rectImg: "img/mision.jpeg"
+          },
+          {
+            headlineFirstLine: "VISIÓN",
+            headlineSecondLine: "Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.",
+            sublineFirstLine: "Il n'y a rien de neuf sous",
+            sublineSecondLine: "le soleil",
+            bgImg: "img/Vision-compressor.jpg",
+            rectImg: "img/cerco.jpg"
+          },
+          {
+            headlineFirstLine: "VALORES",
+            headlineSecondLine: "Dedicacion al Cliente, Inovación, Calidad, Respecto"+"<br>"+"jola",
+            sublineFirstLine: "Τίποτα καινούργιο κάτω από",
+            sublineSecondLine: "τον ήλιο",
+            bgImg: "img/valores.jpg",
+            rectImg: "https://i.postimg.cc/3JFLGMRF/slide-rect2.jpg"
+          }
+        ]
+      },
+      mounted: function () {
+        var productRotatorSlide = document.getElementById("app");
+        var startX = 0;
+        var endX = 0;
+
+        productRotatorSlide.addEventListener("touchstart", (event) => startX = event.touches[0].pageX);
+
+        productRotatorSlide.addEventListener("touchmove", (event) => endX = event.touches[0].pageX);
+
+        productRotatorSlide.addEventListener("touchend", function (event) {
+          var threshold = startX - endX;
+
+          if (threshold < 150 && 0 < this.currentSlide) {
+            this.currentSlide--;
+          }
+          if (threshold > -150 && this.currentSlide < this.slides.length - 1) {
+            this.currentSlide++;
+          }
+        }.bind(this));
+      },
+      methods: {
+        updateSlide(index) {
+          index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
+          this.currentSlide = index;
+          this.isFirstLoad = false;
+        }
+      }
+    })
+    var app = new Vue({
+      el: '#pricing',
+      data: {
+        productos: [
+          {
+            desc: "Videovigilancia", img: "Videovigilancia.jpg", detalles:
+              ["Cámaras Analógicas", "Cámaras IP", "Gradores Analógicos", "Gradores IP"]
+          },
+          {
+            desc: "Control de Acceso", img: "ControlAcceso.jpg", detalles:
+              ["Biométricos", "Video Porteros", "Cerraduras"]
+          },
+
+          {
+            desc: "Alarmas y Protección Perimetral", img: "AlarmasPPerimetral.jpg", detalles:
+              ["Alarmas", "Sensores", "Cercos Eléctricos"]
+          },
+
+          {
+            desc: "Equipos de Computación", img: "EquiposComp.jpg", detalles:
+              ["Venta de Computadoras de Escritorio",
+                "Estabilizadores, Ups",
+                "Televisores"]
+          },
+
+          {
+            desc: "Kits de Robótica", img: "KitsRobo.jpg",
+            detalles:
+              ["Arduinos",
+                "Módulos y sensores",
+                "Protoboard, baterias y leds",
+                "Cables y conectores"]
+          },
+
+          {
+            desc: "Portátiles", img: "Portatiles.jpg", detalles:
+              ["Portátil HP",
+                "Portátil Lenovo",
+                "Portátil Dell Inspiron"]
+          },
+
+
+          {
+            desc: "Impresoras", img: "Impresoras.jpg", detalles:
+              ["Impresoras Epson L3110",
+                "Impresoras Epson L5190",
+                "Tintas"]
+          },
+
+          {
+            desc: "Celulares y accesorios", img: "CeluAcces.jpg", detalles:
+              ["Venta de teléfonos celulares", "Accesorios", "Audifonos", "Parlantes"]
+          },
+
+
+        ],
+      },
+      methods: {
+        cargar() {
+          var vue = this;
+          var db = firebase.firestore();
+          var dbcategorias = db.collection("sedes").doc('tarija2').collection("articulos").orderBy("catenom", "desc").limit(6);
+          dbcategorias.get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              var obj = doc.data();
+              obj.id = doc.id;
+              vue.productos.push(obj);
+            });
+
+            console.log(vue.productos);
+          });
+        }
+      },
+      mounted() {
+        //this.cargar();
+      }
+
+    });
+
+    /*  var app = new Vue({
+        el: '#gallery',
+        data: {
+          galeria: [
+            { img: "WhatsApp Image 2019-11-25 at 14.58.20.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.18.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.19.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.21.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.23.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.24.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25 (1).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25 (2).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.25.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.26 (1).jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.27.jpeg" },
+            { img: "WhatsApp Image 2019-11-25 at 14.58.28 (1).jpeg" },
+          ],
+        },
+        methods: {},
+        mounted() { }
+      });*/
+
+
+    var app3 = new Vue({
+      el: '#contact',
+      data: {
+        sedes: [
+          { id: 1, nombre: "Tarija", direccion: 'Calle Suipacha #667 entre Ingavi y La Madrid.', correo: 'cybercorp.tarija100719@gmail.com', tel: "67370323" },
+          { id: 2, nombre: "Sucre", direccion: 'Calle San Alberto #66 zona central', correo: 'cybercorpcentral@gmail.com', tel: "72853579" },
+          { id: 3, nombre: "Potosi", direccion: 'Calle Bolívar esquina lidiustares #1246', correo: 'cybercorpotosi321@gmail.com', tel: "67370321" },
+        ],
+        sede: {},
+      },
+      methods: {
+        sel: function (id) {
+          this.sedes.forEach(function (e) { e.class = ''; });
+          this.sede = this.sedes.find(x => x.id == id);
+          this.sede.class = 'active';
+        },
+      },
+      mounted() {
+        this.sede = this.sedes[0];
+        this.sede.class = 'active';
+      }
+    });
+
+  </script>
+  <script>
+
+    function typeEffect(element, speed) {
+      var text = element.innerHTML;
+      element.innerHTML = "";
+
+      var i = 0;
+      var timer = setInterval(function () {
+        if (i < text.length) {
+          element.append(text.charAt(i));
+          i++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+    }
+
+
+    // application
+    var speed = 40;
+    var h1 = document.querySelector('h3', 'h2');
+    var p = document.querySelector('p');
+    var delay = h1.innerHTML.length * speed + speed;
+
+    // type affect to header
+    typeEffect(h1, speed);
+
+
+
+
+
+    // type affect to body
+    //typeEffect(p, speed);
+    setTimeout(function () {
+      p.style.display = "inline-block";
+      typeEffect(p, speed);
+    }, delay);
+
+  </script>
+
+</body>
+
+</html>
