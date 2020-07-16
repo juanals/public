@@ -905,7 +905,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #pricing .get-started-btn{
   background: linear-gradient(45deg, #002f3f,#0e88ab);
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: medium;
+  margin-left: 45%;
 }
+
 
 /* Frequently Asked Questions Section
 --------------------------------*/

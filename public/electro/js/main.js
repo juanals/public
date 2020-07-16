@@ -145,6 +145,7 @@
 			priceSlider.noUiSlider.set([null, value]);
 		}
 	}
+	
 
 	// Price Slider
 	var priceSlider = document.getElementById('price-slider');

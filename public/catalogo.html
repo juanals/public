@@ -68,7 +68,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.html" class="logo">
 									<img src="img/logoblanco.png" alt="">
 								</a>
 							</div>
@@ -104,8 +104,8 @@
 								<div>
 									<a href="#">
 										<i class="fa fa-android"></i>
-										<span>Descarga la App</span>
-										
+										<span>Descarga tu App</span>
+
 									</a>
 								</div>
 								<!-- /Wishlist -->
@@ -357,8 +357,9 @@
 					<!-- /ASIDE -->
 
 					<!-- STORE -->
-
+				
 					<div id="store" class="col-md-9">
+						
 						<!-- store top filter -->
 
 						<!-- /store top filter -->
@@ -366,40 +367,46 @@
 						<!-- store products -->
 
 						<!-- product -->
-						<div class="row" v-for="s in categoriaseleccionada.subcategorias">
-							<p class="product-category" style="text-align: center;">{{s.nombre}}</p>
-							<div class="col-md-3 col-xs-6 " v-for="p,i in s.articuloss">
+						<div v-if="categoriaseleccionada != null"></div>
+							<div  class="row" v-for="s in categoriaseleccionada.subcategorias">
 
-								<div class="product">
-									<div class="product-img">
-										<img :src="p.imagenUrl" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">Nuevo</span>
+								<p class="product-category" style="text-align: center;">{{s.nombre}}</p>
+								<div class="col-md-3 col-xs-6 " v-for="p,i in s.articuloss">
+
+									<div class="product">
+										<div class="product-img">
+											<img :src="p.imagenUrl" alt="">
+											<div class="product-label">
+												<span class="sale">-30%</span>
+												<span class="new">Nuevo</span>
+											</div>
+										</div>
+										<div class="product-body">
+											<p class="product-category">{{s.nombre}}</p>
+											<h3 class="product-name"><a href="producto.html"
+													@click="getproductos(p.id)">{{p.nombre}}</a></h3>
+
+											<div class="product-btns">
+												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
+														class="tooltipp">Añadir a favoritos</span></button>
+												<button class="add-to-compare"><i class="fa fa-exchange"></i><span
+														class="tooltipp">Añadir a comparar</span></button>
+												<button class="quick-view"><i class="fa fa-eye"></i><span
+														class="tooltipp">Vista rápida</span></button>
+											</div>
+										</div>
+										<div class="add-to-cart">
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir a
+												cotización</button>
 										</div>
 									</div>
-									<div class="product-body">
-										<p class="product-category">{{s.nombre}}</p>
-										<h3 class="product-name"><a href="producto.html"
-												@click="getproductos(p.id)">{{p.nombre}}</a></h3>
-
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span
-													class="tooltipp">Añadir a favoritos</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span
-													class="tooltipp">Añadir a comparar</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span
-													class="tooltipp">Vista rápida</span></button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir a
-											cotización</button>
-									</div>
+								
 								</div>
-
+								<div class="clearfix visible-xs"></div>
 							</div>
 						</div>
+
+
 						<!-- /product -->
 						<div class="clearfix visible-sm visible-xs"></div>
 
@@ -407,7 +414,7 @@
 						<!-- /store products -->
 
 						<!-- store bottom filter -->
-						<div class="store-filter clearfix">
+						<div  class="store-filter clearfix">
 							<span class="store-qty">Mostrando 20-100 Productos</span>
 							<ul class="store-pagination">
 								<li class="active">1</li>
@@ -440,7 +447,7 @@
 								<input class="input" type="email" placeholder="Introduce tu corrreo Electónico">
 								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Suscribir</button>
 							</form>
-							
+
 						</div>
 					</div>
 				</div>
@@ -459,22 +466,22 @@
 					<!-- row -->
 					<div class="row">
 						<div class="col-md-3 col-xs-6">
-							
+
 							<div class="footer">
-							<a href="#" class="logo1" >
+								<a href="#" class="logo1">
 									<img src="img/logoletra.png" alt="">
 								</a>
-								
+
 							</div>
 						</div>
 						<div class="clearfix visible-xs"></div>
 
 						<div class="col-md-3 col-xs-6">
-							
+
 							<div class="footer">
 								<h3 class="footer-title">Información</h3>
 								<ul class="footer-links">
-									
+
 									<li><a href="#"><i class="fa fa-map-marker"></i>Calle Suipacha entre Ingavi y Madrid
 											#667</a></li>
 									<li><a href="#"><i class="fa fa-phone"></i>+591 67370323</a></li>
@@ -488,18 +495,18 @@
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
 								<h3 class="footer-title">Descarga nuestra App</h3>
-								<div class="newsletter" >
-								<ul class="newsletter-follow">
-									<li>
-										<a href="#"><i class="fa fa-android"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-apple"></i></a>
-									</li>
-									
-								</ul>
-							</div>
-								
+								<div class="newsletter">
+									<ul class="newsletter-follow">
+										<li>
+											<a href="#"><i class="fa fa-android"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-apple"></i></a>
+										</li>
+
+									</ul>
+								</div>
+
 							</div>
 						</div>
 
@@ -511,23 +518,23 @@
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
 								<h3 class="footer-title">Siguenos en nuestras Redes Sociales</h3>
-								<div class="newsletter" >
-								<ul class="newsletter-follow">
-									<li>
-										<a href="#"><i class="fa fa-facebook"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-instagram"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-pinterest"></i></a>
-									</li>
-								</ul>
-							</div>
-								
+								<div class="newsletter">
+									<ul class="newsletter-follow">
+										<li>
+											<a href="#"><i class="fa fa-facebook"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-twitter"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-instagram"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-pinterest"></i></a>
+										</li>
+									</ul>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -553,7 +560,7 @@
 							</ul>
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								CYBERCORP 
+								CYBERCORP
 								<script>document.write(new Date().getFullYear());</script> | Todos los derechos
 								reservados.
 								<!-- Diseñado por <a
@@ -571,6 +578,22 @@
 		<!-- /FOOTER -->
 	</div>
 	<!-- jQuery Plugins -->
+	<script type="text/javascript" id="demo5">
+	$('#demo5').pagination({
+    dataSource: [1, 2, 3, 4, 5, 6],
+    pageSize: 5,
+    showGoInput: true,
+    showGoButton: true,
+    callback: function(data, pagination) {
+        // template method of yourself
+        var html = template(data);
+        dataContainer.html(html);
+    }
+})
+	</script>
+	<script src="electro/js/pagination.js"></script>
+	<script src="electro/js/pagination.min.js"></script>
+	<script src="electro/js/main.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="js/stringify-object.js"></script>
@@ -585,7 +608,7 @@
 	<script src="electro/js/slick.min.js"></script>
 	<script src="electro/js/nouislider.min.js"></script>
 	<script src="electro/js/jquery.zoom.min.js"></script>
-	<script src="electro/js/main.js"></script>
+	
 	<script src="js/shop_custom.js"></script>
 	<script src="js/axios.js"></script>
 	<script src="js/index.js"></script>

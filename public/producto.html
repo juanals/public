@@ -68,7 +68,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+									<img src="img/logoblanco.png" alt="">
 								</a>
 							</div>
 						</div>
@@ -97,7 +97,15 @@
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
 										<span>Favoritos</span>
-										<div class="qty">2</div>
+										<div class="qty">1</div>
+									</a>
+								</div>
+
+								<div>
+									<a href="#">
+										<i class="fa fa-android"></i>
+										<span>Descarga tu App</span>
+										
 									</a>
 								</div>
 								<!-- /Wishlist -->
@@ -146,12 +154,12 @@
 								<!-- /Cart -->
 
 								<!-- Menu Toogle -->
-								<div class="menu-toggle">
+								<!--<div class="menu-toggle">
 									<a href="#">
 										<i class="fa fa-bars"></i>
 										<span>Menu</span>
 									</a>
-								</div>
+								</div> -->
 								<!-- /Menu Toogle -->
 							</div>
 						</div>
@@ -173,7 +181,7 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li ><a href="#">Categorias</a></li>
+						<li ><a href="catalogo.html">Categorias</a></li>
 						<li ><a href="index.html">Inicio</a></li> 
 					</ul>
 					<!-- /NAV -->
@@ -193,7 +201,8 @@
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="#">Categorias</a></li>
-							<!-- <li><a href="#">{{productoseleccionado.categoria.nombre}}</a></li>-->
+							 <li><a href="#">{{productoseleccionado.categoria.nombre}}</a></li>
+							 <li><a href="#">{{productoseleccionado.nombre}}</a></li>
 							
 						</ul>
 					</div>
@@ -214,7 +223,7 @@
 					<div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img :src="productoseleccionado.imagenUrl" alt="">
+								<img :src="productoseleccionado.imagenUrl" >
 							</div>
 
 							
@@ -226,8 +235,9 @@
 					<div class="col-md-2  col-md-pull-5">
 						<div id="product-imgs">
 							<div class="product-preview">
-								<img :src="productoseleccionado.imagenUrl" alt="">
+								<img :src="productoseleccionado.imagenUrl" >
 							</div>
+							
 
 							
 						</div>
@@ -648,7 +658,7 @@
 							<div class="product-body">
 								<p class="product-category">Category</p>
 								<h3 class="product-name"><a href="#">Nombre del producto</a></h3>
-								<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+							<!---->	<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 								<div class="product-rating">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -718,25 +728,12 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
-							<p>Registrarse para recibir más <strong>Información</strong></p>
+							<p>Registrate para recibir más <strong>INFORMACIÓN</strong></p>
 							<form>
 								<input class="input" type="email" placeholder="Introduce tu correo Electrónico">
 								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Suscribir</button>
 							</form>
-							<ul class="newsletter-follow">
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</li>
-							</ul>
+							
 						</div>
 					</div>
 				</div>
@@ -756,54 +753,73 @@
 					<div class="row">
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Acerca de Nosotros</h3>
-								<p>Somos una Empresa de Seguridad, Sistemas y Tecnología que ofrece servicios con un alto grado de calidad y
-									eficacia de los mismos.</p>
-								<ul class="footer-links">
-									<li><a href="#"><i class="fa fa-map-marker"></i>Calle Suipacha entre Ingavi y Madrid #667</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>+591 67370323</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>cybercorp.tarija100719@gmail.com</a></li>
-								</ul>
+								<a href="#" class="logo1" >
+										<img src="img/logoletra.png" alt="">
+									</a>
+									
+								</div>
 							</div>
-						</div>
-
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
-								<h3 class="footer-title">Categorias</h3>
-								<ul class="footer-links">
-									<li><a href="#">Hot deals</a></li>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Cameras</a></li>
-									<li><a href="#">Accessories</a></li>
-								</ul>
+							<div class="clearfix visible-xs"></div>
+	
+							<div class="col-md-3 col-xs-6">
+								
+								<div class="footer">
+									<h3 class="footer-title">Información</h3>
+									<ul class="footer-links">
+										
+										<li><a href="#"><i class="fa fa-map-marker"></i>Calle Suipacha entre Ingavi y Madrid
+												#667</a></li>
+										<li><a href="#"><i class="fa fa-phone"></i>+591 67370323</a></li>
+										<li><a href="#"><i class="fa fa-envelope-o"></i>cybercorp.tarija100719@gmail.com</a>
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-
 						<div class="clearfix visible-xs"></div>
 
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Información</h3>
-								<ul class="footer-links">
-									<li><a href="#">Acerca de Nosotros</a></li>
-									<li><a href="#">Contactanos</a></li>
-									<li><a href="#">Politica de Privacidad</a></li>
-									<li><a href="#">Pedidos y Devoluciones</a></li>
-									<li><a href="#">Terminos & Condiciones</a></li>
+								<h3 class="footer-title">Descarga nuestra App</h3>
+								<div class="newsletter" >
+								<ul class="newsletter-follow">
+									<li>
+										<a href="#"><i class="fa fa-android"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-apple"></i></a>
+									</li>
+									
 								</ul>
+							</div>
+								
 							</div>
 						</div>
 
+
+						<div class="clearfix visible-xs"></div>
+
+
+
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Servicios</h3>
-								<ul class="footer-links">
-									<li><a href="#">SISTEMAS DE SEGURIDAD TOTAL</a></li>
-									<li><a href="#">SOPORTE TÉCNICO Y MANTENIMIENTO</a></li>
-									<li><a href="#">SOFTWARE</a></li>
-									<li><a href="#">HARDWARE</a></li>
+								<h3 class="footer-title">Siguenos en nuestras Redes Sociales</h3>
+								<div class="newsletter" >
+								<ul class="newsletter-follow">
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-twitter"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-pinterest"></i></a>
+									</li>
 								</ul>
+							</div>
+								
 							</div>
 						</div>
 					</div>
@@ -829,11 +845,12 @@
 							</ul>
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | 
-								Diseñado por <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								CYBERCORP 
+								<script>document.write(new Date().getFullYear());</script> | Todos los derechos
+								reservados.
+								<!-- Diseñado por <a
 									href="https://colorlib.com" target="_blank">CYBERCORP</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 						</div>
 					</div>
@@ -847,23 +864,15 @@
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="js/stringify-object.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-	<script src="js/jquery-3.3.1.min.js"></script>
+	
 	<script src="electro/js/jquery.min.js"></script>
 	<script src="electro/js/bootstrap.min.js"></script>
 	<script src="electro/js/slick.min.js"></script>
 	<script src="electro/js/nouislider.min.js"></script>
 	<script src="electro/js/jquery.zoom.min.js"></script>
 	<script src="electro/js/main.js"></script>
-	<script src="js/shop_custom.js"></script>
-	<script src="js/axios.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 	<script src="js/indee.js"></script>
 	<script src="js/vue.js"></script>
 
