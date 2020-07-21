@@ -35,6 +35,28 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+
+
+
+		<style type="text/css">
+			.zoom{
+				/* Aumentamos la anchura y altura durante 2 segundos */
+				transition: width 2s, height 2s, transform 2s;
+				-moz-transition: width 2s, height 2s, -moz-transform 2s;
+				-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+				-o-transition: width 2s, height 2s,-o-transform 2s;
+			}
+			.zoom:hover{
+				/* tranformamos el elemento al pasar el mouse por encima al doble de
+				   su tamaño con scale(2). */
+				transform : scale(2);
+				-moz-transform : scale(2);      /* Firefox */
+				-webkit-transform : scale(2);   /* Chrome - Safari */
+				-o-transform : scale(2);        /* Opera */
+			}
+		</style>
+
+
 </head>
 
 <body>
@@ -223,7 +245,7 @@
 					<div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img :src="productoseleccionado.imagenUrl" >
+								<img :src="productoseleccionado.imagenUrl" class="zoom"/>
 							</div>
 
 							
@@ -235,7 +257,7 @@
 					<div class="col-md-2  col-md-pull-5">
 						<div id="product-imgs">
 							<div class="product-preview">
-								<img :src="productoseleccionado.imagenUrl" >
+								<img :src="productoseleccionado.imagenUrl" class="zoom"/>
 							</div>
 							
 
@@ -260,14 +282,16 @@
 								<a class="review-link" href="#">10 Comentario(s) | Agrega tu evaluación</a>
 							</div>
 							<div>
-								<h3 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h3>
+								<!--<h3 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h3>-->
 								<span class="product-available">En Stock</span>
 							</div>
 							<p>
-								{{productoseleccionado.descripcion}}
+								{{productoseleccionado.descripcion}}¨
+								
+
 							</p>
 
-							<div class="product-options">
+							<!--<div class="product-options">
 								<label>
 									Tamaño
 									<select class="input-select">
@@ -280,18 +304,18 @@
 										<option value="0">Red</option>
 									</select>
 								</label>
-							</div>
+							</div>-->
 
 							<div class="add-to-cart">
 								<div class="qty-label">
 									Cantidad
-									<div class="input-number">
-										<input type="number">
+									<div class="input-number" >
+										<input type="number" v-model="cantidad">
 										<span class="qty-up">+</span>
 										<span class="qty-down">-</span>
 									</div>
 								</div>
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir a cotización</button>
+								<button class="add-to-cart-btn" @click="getcotizacion(productoseleccionado.id,cantidad)"><i class="fa fa-shopping-cart" ></i> Añadir a cotización</button>
 							</div>
 
 							<ul class="product-btns">
@@ -577,7 +601,8 @@
 					</div>
 
 					<!-- product -->
-					<div class="col-md-3 col-xs-6">
+					<div class="col-md-3 col-xs-6"  v-for="s in categorias">
+						<div v-if="productoseleccionado.categoria.id == s.id">
 						<div class="product">
 							<div class="product-img">
 								<img src="./img/product01.png" alt="">
@@ -585,9 +610,9 @@
 									<span class="sale">-30%</span>
 								</div>
 							</div>
-							<div class="product-body">
-								<p class="product-category">Categoria</p>
-								<h3 class="product-name"><a href="#">Nombre del producto</a></h3>
+							<div class="product-body" >
+								<p class="product-category" >Categoria: {{s.nombre}}</p>
+								<h3 class="product-name">{{s.subcategorias.nombre}}<a href="#"></a></h3>
 								<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 								<div class="product-rating">
 								</div>
@@ -606,6 +631,7 @@
 								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Añadir a cotización</button>
 							</div>
 						</div>
+					</div>
 					</div>
 					<!-- /product -->
 

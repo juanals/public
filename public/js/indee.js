@@ -5,8 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
         el: '#app',
         data: {
             idproducto: -1,
-            productoseleccionado:{},
-            categorias:[],
+            productoseleccionado: {},
+            categorias: [],
+            cantidad: 0,
+            detalle: [],
+            cats: {},
+            categoriasById: {},
         },
         methods: {
 
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("edithqqq", id)
                 var sql = `query{
 						producto(id:`+ id + `){id nombre descripcion imagenUrl categoria{
+                            id
                             nombre
                           } }
 						
@@ -26,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log("hola edith", lista);
                     this.productoseleccionado = lista;
                     window.localStorage.setItem('productoseleccionado', JSON.stringify(lista));
-                   
-                    
+
+
 
 
                 }).catch((error) => {
@@ -35,40 +40,82 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
 
             },
+            getsubcategorias: function (id) {
 
-
-
-
-        },
-        getcategorias: function(){
-            axios.post(SERVER,{
-                query: `query{
-                    categorias{
+                var sql = `query{
+                    categoriaById(id:`+ id + `){
                       id
                       nombre
                       subcategorias{
+                        id 
                         nombre
-                      }							 						
+                        articuloss {id nombre imagenUrl}
+                      }
+                      
                     }
-                  }`
-            }).then((res)=>{
-                lista = res.data.data.categorias;
-                
-                this.categorias = lista;
+                    
+                  }`;
+
+                axios.post(SERVER, {
+                    query: sql
+                }).then((res) => {
+                    lista = res.data.data.categoriaById;
+                    console.log("hola edith", lista);
+                    this.cats = lista;
+
+                    this.categoriasById = lista;
+
+
+
+                }).catch((error) => {
+                    console.error(error);
+                })
+
+            },
+          
             
-            }).catch((error)=>{
-                console.error(error);
-            })
+
+            getcategorias: function () {
+                axios.post(SERVER, {
+                    query: `query{
+                        categorias{
+                          id
+                          nombre
+                          subcategorias{
+                            nombre
+                            articuloss{
+                              nombre
+                            }
+                          }							 						
+                        }
+                      }`
+                }).then((res) => {
+                    lista = res.data.data.categorias;
+
+                    this.categorias = lista;
+
+                }).catch((error) => {
+                    console.error(error);
+                })
+
+            },
+
+            getcotizacion: function (id, cantidad) {
+                console.log("diegoooo", id, cantidad)
+                detalle.push({ producto: id, cantidad: cantidad })
+            }
 
         },
+
+
         mounted() {
 
-            
-            
+
+
             this.idproducto = localStorage.getItem('idproducto');
-                console.log("erer", this.idproducto);
-                this.getproductos(this.idproducto);
-                this.getcategorias();
+            console.log("erer", this.idproducto);
+            this.getproductos(this.idproducto);
+            this.getcategorias();
             /*this.getsubcategorias();*/
             /*$('.gallery a').simpleLightbox({});*/
         }

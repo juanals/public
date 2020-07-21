@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 							categorias{
 							  id
 							  nombre
+							  imagenUrl
 							  subcategorias{
 								nombre
 							  }							 						
