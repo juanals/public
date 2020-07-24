@@ -18,11 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				subcategorias:[],
 				nombrecategoria:'',
 				c: 1,
-				estilo1:'position: absolute; left: 0px; top: 0px;',
-				estilo2:'position: absolute; left: 177px; top: 0px;',
-				estilo3:'style="position: absolute; left: 355px; top: 0px;',
-				estilo4:'style="position: absolute; left: 532px; top: 0px;',
-				estilo5:'style="position: absolute; left: 710px; top: 0px;',
+			
 	    		idarea:1,
 	    		nuevos:true,
 	    		galeria:[{foto:'e1.jpg',descripcion:'Diplomado en emergencias médicas'},
@@ -34,7 +30,44 @@ document.addEventListener('DOMContentLoaded', function() {
 	    				{foto:'e9.jpg',descripcion:'Maestria en instrumentación Quirúrgica'},
 	    				{foto:'e10.jpg',descripcion:'Maestría en Derecho Notarial'},
 	    				{foto:'e11.jpg',descripcion:'Maestría en Derecho Procesal Penal'},
-	    				{foto:'e12.jpg',descripcion:'Maestría en Ingeniería Vial'}]
+						{foto:'e12.jpg',descripcion:'Maestría en Ingeniería Vial'}],
+				currentSlide: 0,
+				isPreviousSlide: false,
+				isFirstLoad: true,
+				slides: [
+				  {
+					headlineFirstLine: "MISIÓN",
+					headlineSecondLine: "Satisfacer las necesidades de nuestros clientes con calidad responsabilidad, competitividad, disponibilidad y soporte a futuro en todos nuestros servicios",
+					sublineFirstLine: "Nihil sub sole",
+					sublineSecondLine: "novum",
+					bgImg: "img/camaras/cam2.jpg",
+					rectImg: "img/mision.jpeg"
+				  },
+				  {
+					headlineFirstLine: "VISIÓN",
+					headlineSecondLine: "Ser una entidad reconocida por la calidad de sus productos y servicios, a través de una red de operaciones a nivel nacional, impulsando el bienestar y innovación tecnológica en el país.",
+					sublineFirstLine: "Il n'y a rien de neuf sous",
+					sublineSecondLine: "le soleil",
+					bgImg: "img/camaras/cam3.jpg",
+					rectImg: "img/cerco.jpg"
+				  },
+				  {
+					headlineFirstLine: "VALORES",
+					headlineSecondLine: "-Dedicación al cliente -Innovación -Calidad -Respeto",
+					headlineTLine: "-Colaboración -Cooperación -Liderazgo -Responsabilidad ",
+					headlineFLine: "-Excelencia -Ética -Creatividad -Identidad ",
+					sublineFirstLine: "Τίποτα καινούργιο κάτω από",
+					sublineSecondLine: "τον ήλιο",
+					bgImg: "img/valores.jpg",
+					rectImg: "https://i.postimg.cc/3JFLGMRF/slide-rect2.jpg"
+				  }
+				],
+				sedes: [
+					{ id: 1, nombre: "Tarija", direccion: 'Calle Suipacha #667 entre Ingavi y La Madrid.', correo: 'cybercorp.tarija100719@gmail.com', tel: "67370323" },
+					{ id: 2, nombre: "Sucre", direccion: 'Calle San Alberto #66 zona central', correo: 'cybercorpcentral@gmail.com', tel: "72853579" },
+					{ id: 3, nombre: "Potosi", direccion: 'Calle Bolívar esquina lidiustares #1246', correo: 'cybercorpotosi321@gmail.com', tel: "67370321" },
+				  ],
+				  sede: {},
 	    	},
 	    	methods:{
 	    		getsedes: function(){
@@ -110,38 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
 					window.localStorage.setItem('idproducto',id );
 
 				},
-	    		getultimosprogramas: function(){
-	    			//global.commit('cargar',true);
-	    			axios.post(SERVER,{
-	    				query: `query{programas(latest:true,por_fecha:true){id,version,grupo,fecha_inicio,arte,portada,
-	    						postgrado{nombre,categoria{nombre}},sede{nombre},universidad{nombre}}}`
-	    			}).then((res)=>{
-	    				lista = res.data.data.programas;
-	    				lista.pop();
-	    				this.programas = lista;
-	    				repararImg();
-	    			}).catch((error)=>{
-	    				//n_error(error);
-	    			}).finally(function () {
-	    				//global.commit('cargar',false);
-	    			});
-	    		},
-	    		getprogramasmenu:function(){
-	    			axios.post(SERVER, {
-	    				query:`query{
-								  programas(por_fecha:false,idsede:`+this.sedes[this.s].id+`){
-								    id,postgrado{nombre,categoria{nombre}},version,grupo}
-								}`
-	    			}).then((res)=> {
-	    				datos=res.data.data.programas;
-	    				this.programas_menu=datos;
-	    			}).catch((error)=>{
-	    				//n_error(error);
-	    			}).finally(()=> {
-	    				//global.commit('cargar',false);
-	    				this.activo=true;
-	    			});
-				},
+	    		
+	    		
 				getproductosmenu:function(){
 	    			axios.post(SERVER, {
 	    				query:`query{
@@ -164,23 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	    				//n_error(error);
 	    			});
 	    		},
-	    		getareas: function(){
-	    			//global.commit('cargar',true);
-	    			axios.post(SERVER,{
-	    				query: `query{areas{id,nombre}}`
-	    			}).then((res)=>{
-	    				todos={id:0,nombre:"Todos"};
-	    				lista = res.data.data.areas;
-	    				lista.unshift(todos);
-	    				this.areas = lista;
-	    				this.idarea=lista[0].id;
-	    				this.cargar();
-	    			}).catch((error)=>{
-	    				//n_error(error);
-	    			}).finally(function () {
-	    				//global.commit('cargar',false);
-	    			});
-	    		},
+	    	
 	    		/*getcategorias: function(){
 	    			//global.commit('cargar',true);
 	    			axios.post(SERVER,{
@@ -210,24 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						console.error(error)
 					  });
 	    		},*/
-	    		cargar:function(){
-	    			axios.post(SERVER, {
-	    				query:`query{
-								  programas(latest:`+this.nuevos+`,por_fecha:false,idsede:`+this.sedes[this.s].id+`,categoria:`+this.idcategoria+`,area:`+this.idarea+`){
-								    id,postgrado{nombre,categoria{nombre}},version,grupo,fecha_inicio,arte,portada,sede{nombre}
-								  }
-								}`
-	    			}).then((res)=> {
-	    				datos=res.data.data.programas;
-	    				this.programas_sede=datos;
-	    				repararImg();
-	    			}).catch((error)=>{
-	    				//n_error(error);
-	    			}).finally(()=> {
-	    				//global.commit('cargar',false);
-	    				this.activo=true;
-	    			});
-	    		},
+	    	
 	    		cambiarcategoria:function(id){
 	    			this.idcategoria=id;
 	    			this.cargar();
@@ -240,7 +210,17 @@ document.addEventListener('DOMContentLoaded', function() {
 	    			this.s=idx;
 	    			this.cargar();
 	    			this.initMaps();
-	    		},
+				},
+				updateSlide(index) {
+					index < this.currentSlide ? this.isPreviousSlide = true : this.isPreviousSlide = false;
+					this.currentSlide = index;
+					this.isFirstLoad = false;
+				  },
+				  sel: function (id) {
+					this.sedes.forEach(function (e) { e.class = ''; });
+					this.sede = this.sedes.find(x => x.id == id);
+					this.sede.class = 'active';
+				  },
 	    		initMaps:function(){
 	    				map=new google.maps.Map(document.getElementById('map'), {
 	        		        center: {lat: this.sedes[this.s].latitud, lng: this.sedes[this.s].longitud},
@@ -271,7 +251,27 @@ document.addEventListener('DOMContentLoaded', function() {
 				this.productoseleccionado=JSON.parse(localStorage.getItem('productoseleccionado')),
 				console.log("erer",this.productoseleccionado)
 				/*this.getsubcategorias();*/
-	    		/*$('.gallery a').simpleLightbox({});*/
+				/*$('.gallery a').simpleLightbox({});*/
+				var productRotatorSlide = document.getElementById("cyber");
+				var startX = 0;
+				var endX = 0;
+		
+				productRotatorSlide.addEventListener("touchstart", (event) => startX = event.touches[0].pageX);
+		
+				productRotatorSlide.addEventListener("touchmove", (event) => endX = event.touches[0].pageX);
+		
+				productRotatorSlide.addEventListener("touchend", function (event) {
+				  var threshold = startX - endX;
+		
+				  if (threshold < 150 && 0 < this.currentSlide) {
+					this.currentSlide--;
+				  }
+				  if (threshold > -150 && this.currentSlide < this.slides.length - 1) {
+					this.currentSlide++;
+				  }
+				}.bind(this));
+				this.sede = this.sedes[0];
+				this.sede.class = 'active';
 	    	}
 	    });
 	  });

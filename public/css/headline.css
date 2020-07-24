@@ -42,13 +42,13 @@
   
   .slide-wrapper {
     border-radius: 20px;
-    background-size:cover !important;
+    width: 100% !important;
     height: 100% !important;
     
-    background-position: center center;
+    background-position: top center;
     position: absolute;
     
-    width: 100%;
+   
     background-blend-mode: darken;
     
   }
@@ -92,25 +92,34 @@
     position: relative;
     z-index: 2;
     height: 100%;
+   
+    
     overflow: hidden;
     border-radius: 20px;
   }
   .slide-bg-text {
     font-family: 'fuente1';
-    color: #000;
+    color: #fff !important;
     font-size: 42vh;
-    line-height: .8;
-    opacity: .03;
-    font-weight: 900;
+   
+    
     margin-top: -4rem;
     position: absolute;
-    top: 50%;
-    left: 5vw;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    top: 24%;
+    margin-right: 20%;
+    margin-left: 10%;
+  
+  
+   
   }
   .slide-bg-text > p:last-child {
-    padding-left: 4rem;
+   
+    color: #fff !important;
+    top: 10%;
+  }
+  .slide-bg-text p{
+   
+    color: #fff !important;
   }
   .slide-content {
     color: #fff;
@@ -125,7 +134,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    margin-right: 20%;
+    
   }
   @media (max-width: 1000px) {
     .slide-content {
@@ -311,7 +320,7 @@
   .controls-button.active {
     cursor: default;
     font-weight: 700;
-    background-color: #002f3f;
+    background-color: #003340;
     font-size: 15px;
     padding-top: 1.9rem;
     padding-bottom: 1.9rem;
