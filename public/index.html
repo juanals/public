@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Electro - HTML Ecommerce Template</title>
+	<title>CYBERCORP</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -46,6 +46,8 @@
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style1.css" rel="stylesheet">
 
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -241,21 +243,21 @@
 									<li class="hassubs">
 										<a href="#">Categorias<i class="fas fa-chevron-down"></i></a>
 										<ul class="cat_menu">
-											<template v-for="cab in categorias">
-											<li v-if="cab.subcategorias.length == 0" ><a href="#" @click="getsubcategorias(cab.id)">{{cab.nombre}} <i
+											<template v-for="cab in categorias" >
+											<li v-if="cab.subcategorias.length == 0" ><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}} <i
 														class="fas fa-chevron-right ml-auto"></i></a></li>
-											
-											</li>
-											<li class="hassubs" v-else><a href="#">{{cab.nombre}}<i
-														class="fas fa-chevron-right"></i></a>
+											<li class="hassubs" v-else><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}}<i
+											    			class="fas fa-chevron-right"></i></a>
 												<ul>
 
 													<li v-for="s in cab.subcategorias" ><a href="#" @click="getsubcategorias(s.id)">{{s.nombre}}<i class="fas fa-chevron-right"></i></a>
 													</li>
 													
 												</ul>
-											</li>
-										</template>
+										 </li>
+										   </template>
+											 
+										 	  
 										</ul>
 									</li>
 									<li class="hassubs">
@@ -420,7 +422,7 @@
 							</div>
 							<div class="shop-body">
 								<h3>{{c.nombre}}</h3>
-								<a href="#"  class="cta-btn"  @click="getsubcategorias(c.id)">Ver <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="catalogo.html"  class="cta-btn"  @click="getcat(c.id)">Ver <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -814,7 +816,18 @@
 	  
 
 
+		  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
+		  <div class="socialbar">
+			<ul>
+			  <li><a href="https://www.facebook.com/cybercorpsrltarija" title="facebook" target="_blank"
+				  class="icon-facebook"><i class="fa fa-facebook"></i></a></li>
+				  <li><a href="https://www.instagram.com/cybercorpsrl" title="Instagram" target="_blank" 
+					class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+			  <li><a href="mailto:cybercorp.tarija100719@gmail.com" title="Email" class="icon-mail"><i
+					class="fa fa-envelope"></i></a></li>
+			</ul>
+		  </div>
 		
 		<!-- /HOT DEAL SECTION -->
 
@@ -843,7 +856,33 @@
 		</div>
 		<!-- /NEWSLETTER -->
 
-
+		<section class="section-bg text-center" style="padding-bottom: 64px;padding-top: 8px;">
+			<div class="section-header">
+			  <h3 class="section-title">NUESTRA CORPORACIÓN</h3>
+			  <span class="section-divider"></span>
+			</div>
+			<div class="row">
+			  <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+				<a href="https://www.cca.edu.bo.test"  target="_blank"> <img class="img-corp" src="img/xlogo_cca4.png"
+					class="img-responsive" alt="logo" width="100">
+				</a>
+			  </div>
+			  <div class="col-md-3 col-xs-6 text-center">
+				<a href="http://www.esam.edu.bo" target="_blank">  <img class="img-corp" src="img/xlogo_esam_principal4.png"
+					class="img-responsive" alt="logo" width="100">
+				</a>
+			  </div>
+			  <div class="col-md-3 col-xs-6 text-center">
+				<a href="https://www.facebook.com/CiberKidsTarija/"target="_blank"> <img class="img-corp" src="img/xlogo_ciberkids4.png"
+					class="img-responsive" alt="logo" width="100">
+				</a>
+			  </div>
+			  <div class="col-md-3 col-xs-6 col-sm-6 text-center">
+				<a href="#"> <img class="img-corp" src="img/logo4.png" class="img-responsive" alt="logo" width="100">
+				</a>
+			  </div>
+			</div>
+		  </section>
 		<!-- FOOTER -->
 		<footer id="footer">
 			<!-- top footer -->
@@ -964,8 +1003,11 @@
 		</footer>
 		<!-- /FOOTER -->
 
+
+	
+
 		<!--  -->
-		<script src="one/js/jquery-3.3.1.min.js"></script>
+		<script  src="one/js/jquery-3.3.1.min.js"></script>
 		<script src="one/greensock/TweenMax.min.js"></script>
 		<script src="one/greensock/TimelineMax.min.js"></script>
 		
@@ -985,6 +1027,7 @@
 		
 		<script src="js/axios.js"></script>
 		<script src="js/index.js"></script>
+		
 		<script src="js/vue.js"></script>
 
 		<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>

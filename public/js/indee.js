@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         data: {
             idproducto: -1,
             productoseleccionado: {},
+            categoriaseleccionada:{},
             categorias: [],
             cantidad: 0,
             detalle: [],
@@ -62,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     lista = res.data.data.categoriaById;
                     console.log("hola edith", lista);
                     this.cats = lista;
+                    this.categoriaseleccionada = lista;
+                    window.localStorage.setItem('categoriaseleccionada', JSON.stringify(lista));
 
                     this.categoriasById = lista;
 
@@ -115,6 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
             this.idproducto = localStorage.getItem('idproducto');
             console.log("erer", this.idproducto);
             this.getproductos(this.idproducto);
+
+            
+
+
             this.getcategorias();
             /*this.getsubcategorias();*/
             /*$('.gallery a').simpleLightbox({});*/

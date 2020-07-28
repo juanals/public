@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				},
 				/**/
 				getsubcategorias: function(id){
-					console.log("edithqqq",id)
+				
 					var sql= `query{
 						categoriaById(id:`+id+`){
 						  id
@@ -139,10 +139,15 @@ document.addEventListener('DOMContentLoaded', function() {
 					})
 
 				},
+				getcat: function(id){
+					window.localStorage.setItem('idcat',id );
+
+				},
 				getproductos: function(id){
 					window.localStorage.setItem('idproducto',id );
 
 				},
+				
 	    		
 	    		
 				getproductosmenu:function(){
@@ -248,7 +253,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		
 	    	
 				this.getcategorias();
+				this.categoriaseleccionada=JSON.parse(localStorage.getItem('categoriaseleccionada')),
+				console.log("Mandar id de categoria",this.categoriaseleccionada)
 				this.productoseleccionado=JSON.parse(localStorage.getItem('productoseleccionado')),
+
 				console.log("erer",this.productoseleccionado)
 				/*this.getsubcategorias();*/
 				/*$('.gallery a').simpleLightbox({});*/
