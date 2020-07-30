@@ -124,10 +124,7 @@
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
-									<select class="input-select">
-										<option v-for="ca in categorias">{{ca.nombre}} </option>
-
-									</select>
+									
 									<input class="input" placeholder="Buscar">
 									<button class="search-btn">Buscar</button>
 								</form>
@@ -148,65 +145,12 @@
 								</div>
 								<div>
 									<a href="#">
-										<i class="fa fa-android"></i>
-										<span>Descarga tu App</span>
+										<i class="fa fa-file"></i>
+										<span>Generar Cotización</span>
 
 									</a>
 								</div>
-								<!-- /Wishlist -->
-
-								<!-- Cart 
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										<div class="qty">3</div>
-									</a>
-									<div class="cart-dropdown">
-										<div class="cart-list">
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product01.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-										</div>
-										<div class="cart-summary">
-											<small>3 Item(s) selected</small>
-											<h5>SUBTOTAL: $2940.00</h5>
-										</div>
-										<div class="cart-btns">
-											<a href="#">View Cart</a>
-											<a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
-										</div>
-									</div>
-								</div>-->
-								<!-- /Cart -->
-
-								<!-- Menu Toogle 
-								<div class="menu-toggle" >
-									<a href="#" >
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-										
-									</a>
-									
-								</div>-->
+							
 								<!-- /Menu Toogle -->
 							</div>
 						</div>
@@ -244,9 +188,9 @@
 										<a href="#">Categorias<i class="fas fa-chevron-down"></i></a>
 										<ul class="cat_menu">
 											<template v-for="cab in categorias" >
-											<li v-if="cab.subcategorias.length == 0" ><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}} <i
+											<li  ><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}} <i
 														class="fas fa-chevron-right ml-auto"></i></a></li>
-											<li class="hassubs" v-else><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}}<i
+											<!--<li class="hassubs" v-else><a href="catalogo.html" @click="getcat(cab.id)">{{cab.nombre}}<i
 											    			class="fas fa-chevron-right"></i></a>
 												<ul>
 
@@ -254,49 +198,22 @@
 													</li>
 													
 												</ul>
-										 </li>
+										 </li>-->
 										   </template>
 											 
 										 	  
 										</ul>
 									</li>
-									<li class="hassubs">
-										<a href="#">Cursos<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li>
-												<a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-												<ul>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-													</li>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-													</li>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>
-													</li>
-												</ul>
-											</li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-										</ul>
+									<li >
+										<a href="#about">Acerca de nosotros<i class="fas fa-chevron-down"></i></a>
+										
 									</li>
-									<li class="hassubs">
-										<a href="#">Nosotros<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a>
-											</li>
-											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog_single.html">Blog Post<i
-														class="fas fa-chevron-down"></i></a></li>
-											<li><a href="regular.html">Regular Post<i
-														class="fas fa-chevron-down"></i></a></li>
-											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a>
-											</li>
-										</ul>
+									<li>
+										<a href="#">Nuestros Servicios<i class="fas fa-chevron-down"></i></a>
+									
 									</li>
 									
-									<li><a href="contact.html">Contáctanos<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="#">Contáctanos<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
 
