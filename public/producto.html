@@ -133,7 +133,7 @@
 									</a>
 								</div>
 								<div>
-									<a href="#">
+									<a href="formulario.html">
 										<i class="fa fa-file"></i>
 										<span>Generar Cotización</span>
 
@@ -407,7 +407,7 @@
 										<span class="qty-down">-</span>
 									</div>
 								</div>
-								<button class="add-to-cart-btn" @click="getcotizacion(productoseleccionado.id,cantidad)"><i class="fa fa-shopping-cart" ></i> Añadir a cotización</button>
+								<button class="add-to-cart-btn" @click="getcotizacion(productoseleccionado.id,cantidad,productoseleccionado.nombre)"><i class="fa fa-shopping-cart" ></i> Añadir a cotización</button>
 							</div>
 
 							<ul class="product-btns">
@@ -839,6 +839,7 @@
 
 	<script src="js/indee.js"></script>
 	<script src="js/vue.js"></script>
+	<script src="js/carrito.js"></script>
 
 </body>
 

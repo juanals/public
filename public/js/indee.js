@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
 
             },
+
+
             getsubcategorias: function(id){
 				
                 var sql= `query{
@@ -106,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             },
 
-            getcotizacion: function (id, cantidad) {
+            getcotizacion: function (id, cantidad,nombre) {
                 console.log("diegoooo", id, cantidad)
-                detalle.push({ producto: id, cantidad: cantidad })
+                agregar(id,cantidad,nombre);
             }
 
         },
