@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
             nombrec:"",
             celular:"",
             correo:"",
+            categoriaseleccionada:{},
+            categoriasById: {},
+            categorias: [],
 
             
         },
@@ -83,21 +86,88 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
 
             },
-
+            getsubcategorias: function(id){
+				
+                var sql= `query{
+                    categoriaById(id:`+id+`){
+                      id
+                      nombre
+                      subcategorias{
+                        id 
+                        nombre
+                        articuloss {id nombre imagenUrl}
+                      }
+                      
+                    }
+                    
+                  }`;
+                  console.log("ee",sql)
+                axios.post(SERVER,{
+                    query: sql
+                }).then((res)=>{
+                    lista = res.data.data.categoriaById;
+                    console.log("hola edith",lista);
+                    this.categoriaseleccionada=lista;
+                    
+                    this.categoriasById = lista;
+    
+                    
+                
+                }).catch((error)=>{
+                    console.error(error);
+                })
+    
+            },
+            getcat: function(id){
+                window.localStorage.setItem('idcat',id );
+    
+            },
+          
+            
+    
+            getcategoriasx: function () {
+                axios.post(SERVER, {
+                    query: `query{
+                        categorias{
+                          id
+                          nombre
+                          subcategorias{
+                            nombre
+                            articuloss{
+                              nombre
+                            }
+                          }							 						
+                        }
+                      }`
+                }).then((res) => {
+                    lista = res.data.data.categorias;
+    
+                    this.categorias = lista;
+    
+                }).catch((error) => {
+                    console.error(error);
+                })
+    
+            },
 
         },
+       
+
 
 
        
 
         mounted() {
 
+          this.categoriaseleccionada=JSON.parse(localStorage.getItem('categoriaseleccionada'));
+            
+
+         this.getcategoriasx();
             
             console.log("hiii");
             this.carrito= getcarritox();
             console.log(this.carrito);
             this.getsedes();
-
             
         }
     });

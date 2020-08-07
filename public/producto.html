@@ -134,7 +134,7 @@
 								</div>
 								<div>
 									<a href="formulario.html">
-										<i class="fa fa-file"></i>
+										<i class="fa fa-shopping-cart"></i>
 										<span>Generar Cotización</span>
 
 									</a>
@@ -399,15 +399,16 @@
 							</div>-->
 
 							<div class="add-to-cart">
+								<form >
 								<div class="qty-label">
 									Cantidad
-									<div class="input-number" >
-										<input type="number" v-model="cantidad">
-										<span class="qty-up">+</span>
-										<span class="qty-down">-</span>
+									<div  >
+										<input type="number" v-model="cantidad" min="1"  pattern="^[1-9]+" required>
+										
 									</div>
 								</div>
 								<button class="add-to-cart-btn" @click="getcotizacion(productoseleccionado.id,cantidad,productoseleccionado.nombre)"><i class="fa fa-shopping-cart" ></i> Añadir a cotización</button>
+							</form>
 							</div>
 
 							<ul class="product-btns">
